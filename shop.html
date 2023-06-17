@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shop - Pelatihan Public Speaking</title>
+    <meta content="Shop - Pelatihan Public Speaking" name="description" />
+    <meta content="Kursus Public Speaking Online" name="keywords" />
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="Kelas Public Speaking" />
+    <meta property="og:site" content="dialogika.co/" />
+    <meta
+      property="og:title"
+      content="Basic Private - Kursus Public Speaking Online | Dialogika"
+    />
+    <meta
+      property="og:description"
+      content="Kursus Public Speaking Online selama SEBULAN mulai dari Basic Private ada GARANSI mengulang. Kelas ini hanya ada di Dialogika"
+    />
+    <meta
+      property="og:image"
+      content="https://g.foolcdn.com/editorial/images/702742/consumer-reviews-information-online.jpg?width=165"
+    />
+    <meta property="og:url" content="dialogika.co/program/basic-private.html" />
+    <meta property="og:type" content="page" />
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- VueJS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/shop.js"></script>
+    <link rel="stylesheet" href="assets/css/shop.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link href="assets/css/boxicons/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- css here -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <div id="preloader"></div>
+    <main-header></main-header>
+    <!-- Start of shop product section
+		============================================= -->
+    <section id="shop-product" class="shop-product-section">
+      <div class="container">
+        <div class="product-item">
+          <div id="app">
+            <div class="row">
+              <div class="col-md-9">
+                <div class="shop-product-item">
+                  <div class="product-showcase">
+                    <div class="genius-shop-item">
+                      <div class="tab-container">
+                        <div
+                          id="tab1"
+                          class="tab-content-1 best-product-section"
+                        >
+                          <h2 class="widget-title text-capitalize">
+                            Katalog Buku
+                          </h2>
+                          <div class="row">
+                            <div
+                              class="col-md-4"
+                              v-for="book in books"
+                              :key="book.id"
+                            >
+                              <div class="product-img-text">
+                                <div class="product-img text-center mb20">
+                                  <img :src="book.gambar" alt="" />
+                                  <!--  tambahkan script ini jika ingin mengambil gambar lokal assets/img/product/' + -->
+                                </div>
+                                <div
+                                  class="product-text-content relative-position"
+                                >
+                                  <div class="best-title-price float-left">
+                                    <div class="course-title headline">
+                                      <h3><a href="#">{{ book.judul }}</a></h3>
+                                    </div>
+                                    <p>{{ book.deskripsi }}</p>
+                                    <div class="price-start">
+                                      <span
+                                        >{{ formatCurrency(book.harga) }}</span
+                                      >
+                                    </div>
+                                  </div>
+                                  <div class="add-cart text-center">
+                                    <i
+                                      class="fas fa-cart-plus"
+                                      @click="addToCart(book)"
+                                    ></i>
+                                  </div>
+
+                                  <input
+                                    type="number"
+                                    v-model="book.quantity"
+                                    min="1"
+                                    step="1"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- tab-1 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="side-bar-widget first-widget">
+                  <h2 class="widget-title text-capitalize">Keranjang buku</h2>
+                  <div class="post-categori ul-li-block">
+                    <button @click="openPopup" class="tp-btn">
+                      Lihat Keranjang
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <!-- Tombol Lihat Keranjang -->
+
+                  <!-- Popup Keranjang -->
+                  <div v-if="showPopup" class="popup">
+                    <div class="popup-content">
+                      <h3>Keranjang</h3>
+                      <button @click="closePopup" class="close-btn">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                      </button>
+                      <ul>
+                        <li v-for="item in cartItems" :key="item.id">
+                          <img
+                            :src="getProductImage(item)"
+                            alt="Product Image"
+                            style="width: 50px"
+                          />
+                          <!--  tambahkan script ini jika ingin mengambil gambar lokal assets/img/product/' + -->
+
+                          {{ item.judul }} <br /><small>X </small>
+                          {{ item.quantity }} = {{ formatCurrency(item.harga *
+                          item.quantity) }}
+                          <button @click="removeFromCart(item.id)" id="remove">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                          </button>
+                        </li>
+                      </ul>
+
+                      <div class="checkout">
+                        <p
+                          style="
+                            font-weight: bold;
+                            margin-right: 10px;
+                            margin-top: 15px;
+                          "
+                        >
+                          Total : {{ formatCurrency(calculateOverallTotal()) }}
+                        </p>
+                        <button onclick="checkout()" class="tp-btn">
+                          Checkout
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkout-form" id="checkout">
+                    <form id="checkoutForm" @submit="submitCheckout">
+                      <h3>Form Checkout</h3>
+                      <div
+                        onclick="hidePopup()"
+                        id="checkoutclose"
+                        class="close-btn"
+                      >
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                      </div>
+                      <br />
+                      <label for="nama">Nama:</label>
+                      <input
+                        type="text"
+                        id="nama"
+                        v-model="nama"
+                        required
+                      /><br />
+                      <label for="email">E-Mail:</label>
+                      <input
+                        type="text"
+                        id="email"
+                        v-model="email"
+                        required
+                      /><br />
+                      <label for="nomorHp">Nomor HP:</label>
+                      <input
+                        type="text"
+                        id="nomorHp"
+                        v-model="nomorHp"
+                        required
+                      /><br />
+
+                      <label for="alamat">Alamat:</label>
+                      <textarea id="alamat" v-model="alamat" required></textarea
+                      ><br />
+
+                      <h5>Detail Pembelian</h5>
+                      <ul>
+                        <li v-for="item in cartItems" :key="item.id">
+                          {{ item.judul }} x {{ item.quantity }} = {{
+                          formatCurrency(item.harga * item.quantity) }}
+                        </li>
+                      </ul>
+                      <div class="footer-form">
+                        <h5>
+                          Total: {{ formatCurrency(calculateOverallTotal()) }}
+                        </h5>
+
+                        <button
+                          type="submit"
+                          id="checkoutsubmit"
+                          class="tp-btn"
+                        >
+                          Checkout
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            books: [],
+            showPopup: false,
+            cartItems: [],
+            nama: "",
+            nomorHp: "",
+            alamat: "",
+            buktiTransfer: null,
+          };
+        },
+        mounted() {
+          // Mengambil data JSON menggunakan Axios atau metode lainnya
+          axios
+            .get("assets/js/data.json")
+            .then((response) => {
+              this.books = response.data;
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+        },
+
+        methods: {
+          formatCurrency(harga) {
+            try {
+              const formattedharga = new Intl.NumberFormat("id-ID", {
+                style: "currency",
+                currency: "IDR",
+              }).format(harga);
+              return formattedharga;
+            } catch (error) {
+              console.error(error);
+              return "Error";
+            }
+          },
+          addToCart(book) {
+            if (book.quantity < 1) {
+              alert("Barang yang dibeli harus diatas 0 :-|");
+              return;
+            }
+
+            const cartItem = {
+              id: book.id,
+              gambar: book.gambar,
+              judul: book.judul,
+              harga: book.harga,
+              quantity: book.quantity,
+            };
+
+            this.cartItems.push(cartItem);
+            this.saveCartToCookie();
+
+            alert("Buku telah ditambahkan ke keranjang :)");
+          },
+          getProductImage(item) {
+            // Assuming you have a `gambar` property in the `item` object that stores the image path
+            // If the image is stored locally in the assets/img/product/ folder, you can use the following logic
+            return `${item.gambar}`;
+          },
+          removeFromCart(itemId) {
+            this.cartItems = this.cartItems.filter(
+              (item) => item.id !== itemId
+            );
+            this.saveCartToCookie();
+          },
+
+          setCookie(name, value, days) {
+            const expires = new Date();
+            expires.setDate(expires.getDate() + days);
+            const cookieValue =
+              encodeURIComponent(value) +
+              (days === null ? "" : `; expires=${expires.toUTCString()}`);
+            document.cookie = `${name}=${cookieValue}; path=/`;
+          },
+          getCookie(name) {
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(";");
+
+            for (let i = 0; i < cookies.length; i++) {
+              let cookie = cookies[i];
+              while (cookie.charAt(0) === " ") {
+                cookie = cookie.substring(1);
+              }
+              if (cookie.indexOf(nameEQ) === 0) {
+                return cookie.substring(nameEQ.length, cookie.length);
+              }
+            }
+            return null;
+          },
+          saveCartToCookie() {
+            const cartData = JSON.stringify(this.cartItems);
+            this.setCookie("cart", cartData, 7);
+          },
+          openPopup() {
+            this.showPopup = true;
+            this.cartItems = this.getCartItems();
+          },
+          closePopup() {
+            this.showPopup = false;
+          },
+          getCartItems() {
+            const cartData = this.getCookie("cart");
+            if (cartData) {
+              try {
+                return JSON.parse(decodeURIComponent(cartData));
+              } catch (error) {
+                console.error("Error parsing cart data:", error);
+                return [];
+              }
+            }
+            return [];
+          },
+          calculateTotal(book) {
+            let total = 0;
+            for (const item of this.cartItems) {
+              if (item.judul === book.judul) {
+                total += item.harga * item.quantity;
+              }
+            }
+            return total;
+          },
+          calculateOverallTotal() {
+            let overallTotal = 0;
+
+            for (const book of this.groupedBooks) {
+              overallTotal += this.calculateTotal(book);
+            }
+
+            return overallTotal;
+          },
+          submitCheckout(event) {
+            event.preventDefault();
+
+            const message = `Dialogika Shop - Checkout
+
+Nama: ${this.nama}
+E-Mail: ${this.email}
+Nomor HP: ${this.nomorHp}
+Alamat: ${this.alamat}
+
+Detail Pembelian:
+${this.cartItems
+  .map(
+    (item) =>
+      `${item.judul} x ${item.quantity} = ${this.formatCurrency(
+        item.harga * item.quantity
+      )}`
+  )
+  .join("\n")}
+
+Total: ${this.formatCurrency(this.calculateOverallTotal())}
+
+Mohon dibantu untuk melakukan pembayaran.`;
+
+            const formData = new FormData();
+            formData.append("message", message);
+
+            const whatsappLink = `https://wa.me/6285727442718?text=${encodeURIComponent(
+              message
+            )}`;
+            window.open(whatsappLink, "_blank");
+          },
+        },
+        computed: {
+          groupedBooks() {
+            const groupedBooks = {};
+
+            for (const item of this.cartItems) {
+              if (!groupedBooks[item.judul]) {
+                groupedBooks[item.judul] = item;
+              } else {
+                groupedBooks[item.judul].quantity += item.quantity;
+              }
+            }
+
+            return Object.values(groupedBooks);
+          },
+        },
+      }).mount("#app");
+    </script>
+    <main-footer></main-footer>;
+
+    <script src="assets/js/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jarallax.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/jquery.meanmenu.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/gmap3.min.js"></script>
+    <script src="assets/js/switch.js"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
+
+    <script src="assets/js/script.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+    <!-- Vendor Epora JS -->
+    <script src="assets/vendor/epora/js/vendor/jquery.js"></script>
+    <script src="assets/vendor/epora/js/vendor/waypoints.js"></script>
+    <script src="assets/vendor/epora/js/bootstrap-bundle.js"></script>
+    <script src="assets/vendor/epora/js/meanmenu.js"></script>
+    <script src="assets/vendor/epora/js/slick.js"></script>
+    <script src="assets/vendor/epora/js/magnific-popup.js"></script>
+    <script src="assets/vendor/epora/js/parallax.js"></script>
+    <script src="assets/vendor/epora/js/backtotop.js"></script>
+    <script src="assets/vendor/epora/js/nice-select.js"></script>
+    <script src="assets/vendor/epora/js/counterup.js"></script>
+    <script src="assets/vendor/epora/js/wow.js"></script>
+    <script src="assets/vendor/epora/js/isotope-pkgd.js"></script>
+    <script src="assets/vendor/epora/js/imagesloaded-pkgd.js"></script>
+    <script src="assets/vendor/epora/js/ajax-form.js"></script>
+    <script src="assets/vendor/epora/js/main.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/component/headerfooter.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/bar.js"></script>
+  </body>
+</html>

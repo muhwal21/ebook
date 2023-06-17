@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "gambar": "https://media.istockphoto.com/id/1325103413/id/foto/notepad-kosong-violet-pada-latar-belakang-pastel-ilustrasi-render-3d-sederhana.jpg?s=612x612&w=0&k=20&c=y9AqHhIL3DwQaoAs94_PzZ-urne3UzaTB2KVnu8eE_A=",
+    "judul": "Buku 1",
+    "deskripsi": "Deskripsi Buku 1",
+    "harga": 100000,
+    "kategori": "Fiksi",
+    "quantity": 0
+  },
+  {
+    "id": 2,
+    "gambar": "https://media.istockphoto.com/id/1325103413/id/foto/notepad-kosong-violet-pada-latar-belakang-pastel-ilustrasi-render-3d-sederhana.jpg?s=612x612&w=0&k=20&c=y9AqHhIL3DwQaoAs94_PzZ-urne3UzaTB2KVnu8eE_A=",
+    "judul": "Buku 2",
+    "deskripsi": "Deskripsi Buku 2",
+    "harga": 150000,
+    "kategori": "Non-Fiksi",
+    "quantity": 0
+  },
+  {
+    "id": 3,
+    "gambar": "https://media.istockphoto.com/id/1325103413/id/foto/notepad-kosong-violet-pada-latar-belakang-pastel-ilustrasi-render-3d-sederhana.jpg?s=612x612&w=0&k=20&c=y9AqHhIL3DwQaoAs94_PzZ-urne3UzaTB2KVnu8eE_A=",
+    "judul": "Buku 3",
+    "deskripsi": "Deskripsi Buku 3",
+    "harga": 80000,
+    "kategori": "Fiksi",
+    "quantity": 0
+  },
+  {
+    "id": 4,
+    "gambar": "https://media.istockphoto.com/id/1325103413/id/foto/notepad-kosong-violet-pada-latar-belakang-pastel-ilustrasi-render-3d-sederhana.jpg?s=612x612&w=0&k=20&c=y9AqHhIL3DwQaoAs94_PzZ-urne3UzaTB2KVnu8eE_A=",
+    "judul": "Buku 4",
+    "deskripsi": "Deskripsi Buku 3",
+    "harga": 180000,
+    "kategori": "Fiksi",
+    "quantity": 0
+  }
+]
