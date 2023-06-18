@@ -56,7 +56,6 @@
 
 <body>
 
-    <h1 class="title-shop">JUAL BUKU MURAH DISKON 99%</h1>
     <main class="main bd-grid">
         <article class="card">
           <div class="card__img">
@@ -66,8 +65,9 @@
           <div class="card__name">
             <p>CLICK HERE FOR DETAIL</p>
           </div>
+          <h5 class="card__tittle">Ten Thousand Skies Above You</h5>
           <div class="card__precis">
-            <a href="" class="card__icon"><ion-icon name="heart-outline"></ion-icon></a>
+            <input class="qt" type="number" v-model="book.quantity" min="1" step="1" />
 
             <div>
               <span class="card__preci card__preci--before"><strike>Rp.500.000</strike></span>
@@ -84,8 +84,9 @@
           <div class="card__name">
             <p>CLICK HERE FOR DETAIL</p>
           </div>
+          <h5 class="card__tittle">Elizabeth Gilbert : Big Magic</h5>
           <div class="card__precis">
-            <a href="" class="card__icon"><ion-icon name="heart-outline"></ion-icon></a>
+            <input class="qt" type="number" v-model="book.quantity" min="1" step="1" />
             <div>
               <span class="card__preci card__preci--before"><strike>Rp.500.000</strike></span>
               <span class="card__preci card__preci--now">Rp.25.000</span>
@@ -101,8 +102,9 @@
           <div class="card__name">
             <p>CLICK HERE FOR DETAIL</p>
           </div>
+          <h5 class="card__tittle">F.Scott : The Great Gatsby</h5>
           <div class="card__precis">
-            <a href="" class="card__icon"><ion-icon name="heart-outline"></ion-icon></a>
+            <input class="qt" type="number" v-model="book.quantity" min="1" step="1" />
 
             <div>
               <span class="card__preci card__preci--before"><strike>Rp.500.000</strike></span>
@@ -119,8 +121,9 @@
           <div class="card__name">
             <p>CLICK HERE FOR DETAIL</p>
           </div>
+          <h5 class="card__tittle">F.Scott : The Great Gatsby</h5>
           <div class="card__precis">
-            <a href="" class="card__icon"><ion-icon name="heart-outline"></ion-icon></a>
+            <input class="qt" type="number" v-model="book.quantity" min="1" step="1" />
 
             <div>
               <span class="card__preci card__preci--before"><strike>Rp.500.000</strike></span>
@@ -137,8 +140,9 @@
           <div class="card__name">
             <p>CLICK HERE FOR DETAIL</p>
           </div>
+          <h5 class="card__tittle">Dominicana Angie Cruzz</h5>
           <div class="card__precis">
-            <a href="" class="card__icon"><ion-icon name="heart-outline"></ion-icon></a>
+            <input class="qt" type="number" v-model="book.quantity" min="1" step="1" />
 
             <div>
               <span class="card__preci card__preci--before"><strike>Rp.500.000</strike></span>
@@ -156,8 +160,9 @@
           <div class="card__name">
             <p>CLICK HERE FOR DETAIL</p>
           </div>
+          <h5 class="card__tittle">Ten Thousand Skies Above You</h5>
           <div class="card__precis">
-            <a href="" class="card__icon"><ion-icon name="heart-outline"></ion-icon></a>
+            <input class="qt" type="number" v-model="book.quantity" min="1" step="1" />
 
             <div>
               <span class="card__preci card__preci--before"><strike>Rp.500.000</strike></span>
@@ -294,13 +299,14 @@
         .card__img {
           width: 180px;
           height: auto;
-          padding: 3rem 0;
+          padding-top: 0 !important;
+          padding: 1.7rem 0;
           transition: .5s;
         }
     
         .card__name {
           position: absolute;
-          left: -25%;
+          left: -30%;
           top: 0;
           width: 3.5rem;
           height: 100%;
@@ -345,7 +351,17 @@
           font-size: var(--h3-font-size);
           font-weight: bold;
         }
-    
+        
+        .card__tittle{
+            text-align: center;
+            justify-items: center;
+            transition: 0.5s;
+        }
+
+        .qt{
+            max-width: 45px;
+            max-height: 40px;
+        }
         /*Move left*/
         .card:hover {
           box-shadow: 0 .5rem 1rem #D1D9E6;
@@ -353,6 +369,11 @@
     
         .card:hover .card__name {
           left: 0;
+        }
+
+        .card:hover .card__tittle{
+            margin-left:3.5rem ;
+
         }
     
         .card:hover .card__img {
