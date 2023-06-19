@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "gambar": "https://media.istockphoto.com/id/1325103413/id/foto/notepad-kosong-violet-pada-latar-belakang-pastel-ilustrasi-render-3d-sederhana.jpg?s=612x612&w=0&k=20&c=y9AqHhIL3DwQaoAs94_PzZ-urne3UzaTB2KVnu8eE_A=",
+    "gambar": "https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg",
     "judul": "Buku 1",
     "deskripsi": "Deskripsi Buku 1",
     "harga": 100000,
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "gambar": "https://media.istockphoto.com/id/1325103413/id/foto/notepad-kosong-violet-pada-latar-belakang-pastel-ilustrasi-render-3d-sederhana.jpg?s=612x612&w=0&k=20&c=y9AqHhIL3DwQaoAs94_PzZ-urne3UzaTB2KVnu8eE_A=",
+    "gambar": "https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg",
     "judul": "Buku 2",
     "deskripsi": "Deskripsi Buku 2",
     "harga": 150000,
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "gambar": "https://media.istockphoto.com/id/1325103413/id/foto/notepad-kosong-violet-pada-latar-belakang-pastel-ilustrasi-render-3d-sederhana.jpg?s=612x612&w=0&k=20&c=y9AqHhIL3DwQaoAs94_PzZ-urne3UzaTB2KVnu8eE_A=",
+    "gambar": "https://images-na.ssl-images-amazon.com/images/I/81UWB7oUZ0L.jpg",
     "judul": "Buku 3",
     "deskripsi": "Deskripsi Buku 3",
     "harga": 80000,
@@ -28,10 +28,28 @@
   },
   {
     "id": 4,
-    "gambar": "https://media.istockphoto.com/id/1325103413/id/foto/notepad-kosong-violet-pada-latar-belakang-pastel-ilustrasi-render-3d-sederhana.jpg?s=612x612&w=0&k=20&c=y9AqHhIL3DwQaoAs94_PzZ-urne3UzaTB2KVnu8eE_A=",
+    "gambar": "https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg",
     "judul": "Buku 4",
-    "deskripsi": "Deskripsi Buku 3",
+    "deskripsi": "Deskripsi Buku 4",
     "harga": 180000,
+    "kategori": "Fiksi",
+    "quantity": 0
+  },
+  {
+    "id": 5,
+    "gambar": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F07%2Fchances-are-1-2000.jpg&q=85",
+    "judul": "Buku 5",
+    "deskripsi": "Deskripsi Buku 5",
+    "harga": 300000,
+    "kategori": "Fiksi",
+    "quantity": 0
+  },
+  {
+    "id": 6,
+    "gambar": "https://images-na.ssl-images-amazon.com/images/I/91M4E+SURUL.jpg",
+    "judul": "Buku 6",
+    "deskripsi": "Deskripsi Buku 6",
+    "harga": 2300000,
     "kategori": "Fiksi",
     "quantity": 0
   }

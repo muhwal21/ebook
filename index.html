@@ -46,7 +46,7 @@
   <!-- Start of shop product section
 		============================================= -->
   <section id="shop-product" class="shop-product-section">
-    <div class="container">
+    <div class="container" style="margin-top: 50px;">
       <div class="product-item">
         <div id="app">
           <div class="row">
@@ -61,28 +61,26 @@
                         </h2>
                         <div class="row">
                           <div class="col-md-4" v-for="book in books" :key="book.id">
-                            <div class="product-img-text">
-                              <div class="product-img text-center mb20">
-                                <img :src="book.gambar" alt="" />
-                                <!--  tambahkan script ini jika ingin mengambil gambar lokal assets/img/product/' + -->
-                              </div>
-                              <div class="product-text-content relative-position">
-                                <div class="best-title-price float-left">
-                                  <div class="course-title headline">
-                                    <h3><a href="#">{{ book.judul }}</a></h3>
-                                  </div>
-                                  <p>{{ book.deskripsi }}</p>
-                                  <div class="price-start">
-                                    <span>{{ formatCurrency(book.harga) }}</span>
-                                  </div>
+                            <main class="main bd-grid">
+                              <article class="card" style="border: none;">
+                                <div class="card__img">
+                                  <img :src="book.gambar" alt="">
                                 </div>
-                                <div class="add-cart text-center">
-                                  <i class="fas fa-cart-plus" @click="addToCart(book)"></i>
+                                <div class="card__name">
+                                  <p>CLICK HERE FOR DETAIL</p>
                                 </div>
-
-                                <input type="number" v-model="book.quantity" min="1" step="1" />
-                              </div>
-                            </div>
+                                <h5 class="card__tittle">{{ book.judul }}</h5>
+                                <div class="card__precis">
+                                  <input class="qt" type="number" v-model="book.quantity" min="1" step="1" />
+                      
+                                  <div>
+                                    <span class="card__preci card__preci--before"><strike>Rp.500.000</strike></span>
+                                    <span class="card__preci card__preci--now">{{ formatCurrency(book.harga) }}</span>
+                                  </div>
+                                  <a class="card__icon" @click="addToCart(book)"><ion-icon name="cart-outline"></ion-icon></a>
+                                </div>
+                              </article>
+                            </main>
                           </div>
                         </div>
                       </div>
@@ -393,10 +391,15 @@ Mohon dibantu untuk melakukan pembayaran.`;
   <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+      <!-- ICONS -->
+      <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/component/headerfooter.js"></script>
   <script src="assets/js/main.js"></script>
+  
 
   <script>
     $(".mobile-nav-toggle").on("click", function (e) {

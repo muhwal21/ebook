@@ -1,3 +1,16 @@
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+    --bs-gutter-x: 36px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1362px;
+    --bs-gutter-x: 36px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
@@ -9423,11 +9436,11 @@ page-section & Timeline
 /*-- VARIABLES CSS--*/
 /*Colores*/
 :root {
-  --first-color: #E3F8FF;
+  --first-color: #10579d;
   --second-color: #DCFAFB;
   --third-color: #FFE8DF;
   --accent-color: #FF5151;
-  --dark-color: #161616;
+  --dark-color: #faaf3f;
 }
 
 /*Tipografia responsive*/
@@ -9451,14 +9464,7 @@ page-section & Timeline
 *,
 ::after,
 ::before {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 2rem 0 0 0;
-  background-color: #fff;
-  color: var(--dark-color);
-
+  box-sizing: border-box !important;
 }
 
 h1 {
@@ -9476,7 +9482,8 @@ a {
 
 /*-- LAYAOUT --*/
 .main {
-  padding: 2rem 0;
+  padding: 1rem 0 !important;
+  color: #ffffff;
 }
 
 .bd-grid {
@@ -9627,7 +9634,7 @@ article:nth-child(6) {
 
 .card:hover .card__precis {
   margin-left: 3.5rem;
-  padding: 0 1.5rem;
+  padding: 0 0.5rem;
 }
 
 /*-- MEDIA QUERIES --*/
