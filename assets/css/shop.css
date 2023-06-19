@@ -1,3 +1,19 @@
+.widget-title {
+    font-size: 25px;
+    color: #333333;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 50px; }
+    .widget-title:after {
+      position: absolute;
+      content: '';
+      bottom: -20px;
+      height: 2px;
+      width: 50px;
+      left: 0;
+      background-color: #17d0cf; }
+  
+
 .popup {
     position: fixed;
     top: 0;
