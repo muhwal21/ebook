@@ -18,6 +18,11 @@
   <!-- Axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+
   <!-- css here -->
   <link rel="stylesheet" href="assets/css/bootstrap.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
@@ -27,13 +32,14 @@
   <link rel="stylesheet" href="assets/css/nouislider.css" />
   <link rel="stylesheet" href="assets/css/datepicker.css" />
   <link rel="stylesheet" href="assets/css/magnific-popup.css" />
-  <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
   <link rel="stylesheet" href="assets/css/flaticon_kleaso.css" />
   <link rel="stylesheet" href="assets/css/circularProgressBar.css" />
   <link rel="stylesheet" href="assets/css/spacing.css" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <link href="assets/css/boxicons/css/boxicons.min.css" rel="stylesheet" />
   <link href="assets/vendor/epora/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/vendor/epora/css/font-awesome-pro.css">
+
 
   <!-- css here -->
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -72,12 +78,13 @@
                                 <h5 class="card__tittle">{{ book.judul }}</h5>
                                 <div class="card__precis">
                                   <input class="qt" type="number" v-model="book.quantity" min="1" step="1" />
-                      
+
                                   <div>
                                     <span class="card__preci card__preci--before"><strike>Rp.500.000</strike></span>
                                     <span class="card__preci card__preci--now">{{ formatCurrency(book.harga) }}</span>
                                   </div>
-                                  <a class="card__icon" @click="addToCart(book)"><ion-icon name="cart-outline"></ion-icon></a>
+                                  <a class="card__icon" @click="addToCart(book)"><ion-icon
+                                      name="cart-outline"></ion-icon></a>
                                 </div>
                               </article>
                             </main>
@@ -364,7 +371,37 @@ Mohon dibantu untuk melakukan pembayaran.`;
       },
     }).mount("#app");
   </script>
+
+  <div class="flipbook">
+    <div class="book">
+      <input type="checkbox" name="page1" id="page1">
+      <input type="checkbox" name="page2" id="page2">
+      <input type="checkbox" name="page3" id="page3">
+      <input type="checkbox" name="page4" id="page4">
+      <div class="pages">
+        <div class="page1">
+          <label for="page1"><img src="https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg"
+              alt=""></label>
+        </div>
+        <div class="page2">
+          <label for="page2">
+            <h3>test</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut fuga asperiores doloremque porro dignissimos
+              vitae totam impedit tenetur neque repellendus? Quos accusamus itaque non deleniti, omnis nisi error nam
+              quis.</p>
+          </label>
+        </div>
+        <div class="page3">
+          <label for="page3"><img src="https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg"
+              alt=""></label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <main-footer></main-footer>
+  <!-- End Footer -->
 
   <!-- js here -->
   <script src="assets/js/jquery-2.1.4.min.js"></script>
@@ -393,13 +430,13 @@ Mohon dibantu untuk melakukan pembayaran.`;
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-      <!-- ICONS -->
-      <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <!-- ICONS -->
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/component/headerfooter.js"></script>
   <script src="assets/js/main.js"></script>
-  
+
 
   <script>
     $(".mobile-nav-toggle").on("click", function (e) {
