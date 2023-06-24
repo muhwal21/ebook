@@ -54,332 +54,386 @@
 </head>
 
 <body>
-  <div id="preloader"></div>
-  <main-header></main-header>
-  <!-- Start of shop product section
-		============================================= -->
-  <section id="shop-product" class="shop-product-section">
-    <div class="container">
-      <div class="product-item">
-        <div id="app">
-          <div class="row">
-            <div class="col-md-9">
-              <div class="shop-product-item">
-                <div class="product-showcase">
-                  <div class="genius-shop-item">
-                    <div class="tab-container">
-                      <div id="tab1" class="tab-content-1 best-product-section">
-                        <h2 class="widget-title text-capitalize">
-                          Katalog Buku
-                        </h2>
-                        <div class="row">
-                          <div class="col-md-4" v-for="book in books" :key="book.id">
-                            <div class="product-img-text">
-                              <div class="product-img text-center mb20">
-                                <img :src="book.gambar" alt="" />
-                                <!--  tambahkan script ini jika ingin mengambil gambar lokal assets/img/product/' + -->
-                              </div>
-                              <div class="product-text-content relative-position">
-                                <div class="best-title-price float-left">
-                                  <div class="course-title headline">
-                                    <h3><a href="#">{{ book.judul }}</a></h3>
-                                  </div>
-                                  <p>{{ book.deskripsi }}</p>
-                                  <div class="price-start">
-                                    <span>{{ formatCurrency(book.harga) }}</span>
-                                  </div>
-                                </div>
-                                <div class="add-cart text-center">
-                                  <i class="fas fa-cart-plus" @click="addToCart(book)"></i>
-                                </div>
 
-                                <input type="number" v-model="book.quantity" min="1" step="1" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- tab-1 -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="side-bar-widget first-widget">
-                <h2 class="widget-title text-capitalize">Keranjang buku</h2>
-                <div class="post-categori ul-li-block">
-                  <button @click="openPopup" class="tp-btn">
-                    Lihat Keranjang
-                  </button>
-                </div>
-              </div>
-              <div>
-                <!-- Tombol Lihat Keranjang -->
+  <div class='checkout'>
+    <div class='window'>
+      <div class='order-info'>
+        <div class='order-info-content'>
+          <h2>Order Summary</h2>
+          <div class='line'></div>
+          <table class='order-table'>
+            <tbody>
+              <tr>
+                <td><img src='https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg' class='full-width'></img>
+                </td>
+                <td>
+                  <br> <span class='thin'>Black Magic</span>
+                  <br> <br> <span class='thin small'> QTY : 1<br><br></span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class='price'>RP.200.000</div>
+                </td>
+              </tr>
+            </tbody>
 
-                <!-- Popup Keranjang -->
-                <div v-if="showPopup" class="popup">
-                  <div class="popup-content">
-                    <h3>Keranjang</h3>
-                    <button @click="closePopup" class="close-btn">
-                      <i class="fa fa-times" aria-hidden="true"></i>
-                    </button>
-                    <ul>
-                      <li v-for="item in cartItems" :key="item.id">
-                        <img :src="getProductImage(item)" alt="Product Image" style="width: 50px" />
-                        <!--  tambahkan script ini jika ingin mengambil gambar lokal assets/img/product/' + -->
-
-                        {{ item.judul }} <br /><small>X </small>
-                        {{ item.quantity }} = {{ formatCurrency(item.harga *
-                        item.quantity) }}
-                        <button @click="removeFromCart(item.id)" id="remove">
-                          <i class="fa fa-trash" aria-hidden="true"></i>
-                        </button>
-                      </li>
-                    </ul>
-
-                    <div class="checkout">
-                      <p style="
-                            font-weight: bold;
-                            margin-right: 10px;
-                            margin-top: 15px;
-                          ">
-                        Total : {{ formatCurrency(calculateOverallTotal()) }}
-                      </p>
-                      <button onclick="checkout()" class="tp-btn">
-                        Checkout
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="checkout-form" id="checkout">
-                  <form id="checkoutForm" @submit="submitCheckout">
-                    <h3>Form Checkout</h3>
-                    <div onclick="hidePopup()" id="checkoutclose" class="close-btn">
-                      <i class="fa fa-times" aria-hidden="true"></i>
-                    </div>
-                    <br />
-                    <label for="nama">Nama:</label>
-                    <input type="text" id="nama" v-model="nama" required /><br />
-                    <label for="email">E-Mail:</label>
-                    <input type="text" id="email" v-model="email" required /><br />
-                    <label for="nomorHp">Nomor HP:</label>
-                    <input type="text" id="nomorHp" v-model="nomorHp" required /><br />
-
-                    <label for="alamat">Alamat:</label>
-                    <textarea id="alamat" v-model="alamat" required></textarea><br />
-
-                    <h5>Detail Pembelian</h5>
-                    <ul>
-                      <li v-for="item in cartItems" :key="item.id">
-                        {{ item.judul }} x {{ item.quantity }} = {{
-                        formatCurrency(item.harga * item.quantity) }}
-                      </li>
-                    </ul>
-                    <div class="footer-form">
-                      <h5>
-                        Total: {{ formatCurrency(calculateOverallTotal()) }}
-                      </h5>
-
-                      <button type="submit" id="checkoutsubmit" class="tp-btn">
-                        Checkout
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+          </table>
+          <div class='line'></div>
+          <table class='order-table'>
+            <tbody>
+              <tr>
+                <td><img
+                    src='https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg'
+                    class='full-width'></img>
+                </td>
+                <td>
+                  <br> <span class='thin'>Ten Thousand Skies Above You</span>
+                  <br><br> <span class='thin small'> QTY : 2</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class='price'>RP.150.000</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class='line'></div>
+          <div class='total'>
+            <span style='float:left;'>
+              TOTAL
+            </span>
+            <span style='float:right; text-align:right;'>
+              RP.350.000
+            </span>
           </div>
         </div>
       </div>
+      <div class='credit-info'>
+
+          <button class='pay-btn'>Checkout</button>
+
+        </div>
+
+      </div>
     </div>
-  </section>
-  <script>
-    const { createApp } = Vue;
+  </div>
 
-    createApp({
-      data() {
-        return {
-          books: [],
-          showPopup: false,
-          cartItems: [],
-          nama: "",
-          nomorHp: "",
-          alamat: "",
-          buktiTransfer: null,
-        };
-      },
-      mounted() {
-        // Mengambil data JSON menggunakan Axios atau metode lainnya
-        axios
-          .get("assets/js/data.json")
-          .then((response) => {
-            this.books = response.data;
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-      },
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 
-      methods: {
-        formatCurrency(harga) {
-          try {
-            const formattedharga = new Intl.NumberFormat("id-ID", {
-              style: "currency",
-              currency: "IDR",
-            }).format(harga);
-            return formattedharga;
-          } catch (error) {
-            console.error(error);
-            return "Error";
-          }
-        },
-        addToCart(book) {
-          if (book.quantity < 1) {
-            alert("Barang yang dibeli harus diatas 0 :-|");
-            return;
-          }
+    body,
+    html {
 
-          const cartItem = {
-            id: book.id,
-            gambar: book.gambar,
-            judul: book.judul,
-            harga: book.harga,
-            quantity: book.quantity,
-          };
+      font-family: lato;
+    }
 
-          this.cartItems.push(cartItem);
-          this.saveCartToCookie();
+    h2 {
+      margin-bottom: 0px;
+      margin-top: 25px;
+      text-align: center;
+      font-weight: 200;
+      font-size: 19px;
+      font-size: 1.2rem;
 
-          alert("Buku telah ditambahkan ke keranjang :)");
-        },
-        getProductImage(item) {
-          // Assuming you have a `gambar` property in the `item` object that stores the image path
-          // If the image is stored locally in the assets/img/product/ folder, you can use the following logic
-          return `${item.gambar}`;
-        },
-        removeFromCart(itemId) {
-          this.cartItems = this.cartItems.filter(
-            (item) => item.id !== itemId
-          );
-          this.saveCartToCookie();
-        },
+    }
 
-        setCookie(name, value, days) {
-          const expires = new Date();
-          expires.setDate(expires.getDate() + days);
-          const cookieValue =
-            encodeURIComponent(value) +
-            (days === null ? "" : `; expires=${expires.toUTCString()}`);
-          document.cookie = `${name}=${cookieValue}; path=/`;
-        },
-        getCookie(name) {
-          const nameEQ = name + "=";
-          const cookies = document.cookie.split(";");
+    .checkout {
+      height: 100%;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
 
-          for (let i = 0; i < cookies.length; i++) {
-            let cookie = cookies[i];
-            while (cookie.charAt(0) === " ") {
-              cookie = cookie.substring(1);
-            }
-            if (cookie.indexOf(nameEQ) === 0) {
-              return cookie.substring(nameEQ.length, cookie.length);
-            }
-          }
-          return null;
-        },
-        saveCartToCookie() {
-          const cartData = JSON.stringify(this.cartItems);
-          this.setCookie("cart", cartData, 7);
-        },
-        openPopup() {
-          this.showPopup = true;
-          this.cartItems = this.getCartItems();
-        },
-        closePopup() {
-          this.showPopup = false;
-        },
-        getCartItems() {
-          const cartData = this.getCookie("cart");
-          if (cartData) {
-            try {
-              return JSON.parse(decodeURIComponent(cartData));
-            } catch (error) {
-              console.error("Error parsing cart data:", error);
-              return [];
-            }
-          }
-          return [];
-        },
-        calculateTotal(book) {
-          let total = 0;
-          for (const item of this.cartItems) {
-            if (item.judul === book.judul) {
-              total += item.harga * item.quantity;
-            }
-          }
-          return total;
-        },
-        calculateOverallTotal() {
-          let overallTotal = 0;
+    .dropdown-select.visible {
+      display: block;
+    }
 
-          for (const book of this.groupedBooks) {
-            overallTotal += this.calculateTotal(book);
-          }
+    .dropdown {
+      position: relative;
+    }
 
-          return overallTotal;
-        },
-        submitCheckout(event) {
-          event.preventDefault();
+    ul {
+      margin: 0;
+      padding: 0;
+    }
 
-          const message = `Dialogika Shop - Checkout
+    ul li {
+      list-style: none;
+      padding-left: 10px;
+      cursor: pointer;
+    }
 
-Nama: ${this.nama}
-E-Mail: ${this.email}
-Nomor HP: ${this.nomorHp}
-Alamat: ${this.alamat}
+    ul li:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
 
-Detail Pembelian:
-${this.cartItems
-              .map(
-                (item) =>
-                  `${item.judul} x ${item.quantity} = ${this.formatCurrency(
-                    item.harga * item.quantity
-                  )}`
-              )
-              .join("\n")}
+    .dropdown-select {
+      position: absolute;
+      background: #77aaee;
+      text-align: left;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      width: 90%;
+      left: 2px;
+      line-height: 2em;
+      margin-top: 2px;
+      box-sizing: border-box;
+    }
 
-Total: ${this.formatCurrency(this.calculateOverallTotal())}
+    .thin {
+      font-weight: 400;
+    }
 
-Mohon dibantu untuk melakukan pembayaran.`;
+    .small {
+      font-size: 12px;
+      font-size: .8rem;
+    }
 
-          const formData = new FormData();
-          formData.append("message", message);
+    .half-input-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-          const whatsappLink = `https://wa.me/6285727442718?text=${encodeURIComponent(
-            message
-          )}`;
-          window.open(whatsappLink, "_blank");
-        },
-      },
-      computed: {
-        groupedBooks() {
-          const groupedBooks = {};
+    .half-input-table td:first-of-type {
+      border-right: 10px solid #4488dd;
+      width: 50%;
+    }
 
-          for (const item of this.cartItems) {
-            if (!groupedBooks[item.judul]) {
-              groupedBooks[item.judul] = item;
-            } else {
-              groupedBooks[item.judul].quantity += item.quantity;
-            }
-          }
+    .window {
+      height: 540px;
+      width: 800px;
+      background: #fff;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      border-radius: 30px;
+      z-index: 10;
+    }
 
-          return Object.values(groupedBooks);
-        },
-      },
-    }).mount("#app");
-  </script>
-  <main-footer></main-footer>
+    .order-info {
+      height: 100%;
+      width: 50%;
+      padding-left: 25px;
+      padding-right: 25px;
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .price {
+      bottom: 0px;
+      position: absolute;
+      right: 0px;
+      color: #4488dd;
+    }
+
+    .order-table td:first-of-type {
+      width: 25%;
+    }
+
+    .order-table {
+      position: relative;
+    }
+
+    .line {
+      height: 1px;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background: #ddd;
+    }
+
+    .order-table td:last-of-type {
+      vertical-align: top;
+      padding-left: 25px;
+    }
+
+    .order-info-content {
+      table-layout: fixed;
+
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    .pay-btn {
+      border: none;
+      background: #22b877;
+      line-height: 2em;
+      border-radius: 10px;
+      font-size: 19px;
+      font-size: 1.2rem;
+      color: #fff;
+      cursor: pointer;
+      position: absolute;
+      bottom: 25px;
+      width: calc(100% - 50px);
+      -webkit-transition: all .2s ease;
+      transition: all .2s ease;
+    }
+
+    .pay-btn:hover {
+      background: #22a877;
+      color: #eee;
+      -webkit-transition: all .2s ease;
+      transition: all .2s ease;
+    }
+
+    .total {
+      margin-top: 25px;
+      font-size: 20px;
+      font-size: 1.3rem;
+      position: absolute;
+      bottom: 30px;
+      right: 27px;
+      left: 35px;
+    }
+
+    .dense {
+      line-height: 1.2em;
+      font-size: 16px;
+      font-size: 1rem;
+    }
+
+    .input-field {
+      background: rgba(255, 255, 255, 0.1);
+      margin-bottom: 10px;
+      margin-top: 3px;
+      line-height: 1.5em;
+      font-size: 20px;
+      font-size: 1.3rem;
+      border: none;
+      padding: 5px 10px 5px 10px;
+      color: #fff;
+      box-sizing: border-box;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .credit-info {
+      background: #4488dd;
+      height: 100%;
+      width: 50%;
+      color: #eee;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-size: 14px;
+      font-size: .9rem;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      box-sizing: border-box;
+      padding-left: 25px;
+      padding-right: 25px;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      position: relative;
+    }
+
+    .dropdown-btn {
+      background: rgba(255, 255, 255, 0.1);
+      width: 100%;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 1.5em;
+      cursor: pointer;
+      position: relative;
+      -webkit-transition: background .2s ease;
+      transition: background .2s ease;
+    }
+
+    .dropdown-btn:after {
+      content: '\25BE';
+      right: 8px;
+      position: absolute;
+    }
+
+    .dropdown-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      -webkit-transition: background .2s ease;
+      transition: background .2s ease;
+    }
+
+    .dropdown-select {
+      display: none;
+    }
+
+    .credit-card-image {
+      display: block;
+      max-height: 80px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .credit-info-content {
+      margin-top: 25px;
+      -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .window {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 0px;
+        margin: 20px;
+      }
+
+      .order-info {
+        width: 100%;
+        height: auto;
+        padding-bottom: 100px;
+        border-radius: 0px;
+      }
+
+      .credit-info {
+        width: 100%;
+        height: auto;
+        padding-bottom: 100px;
+        border-radius: 0px 0px 10px 10px;
+      }
+
+      .pay-btn {
+        border-radius: 10px;
+      }
+    }
+  </style>
+
+
 
   <script src="assets/js/jquery-2.1.4.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
@@ -432,8 +486,8 @@ Mohon dibantu untuk melakukan pembayaran.`;
   <script src="assets/js/bar.js"></script>
   <script>
     $(document).on("click", ".mobile-nav-toggle", function (e) {
-    $("#sidebar-mobile").offcanvas("show");
-  });
+      $("#sidebar-mobile").offcanvas("show");
+    });
   </script>
 </body>
 
