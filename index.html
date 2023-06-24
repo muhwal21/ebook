@@ -89,8 +89,11 @@
                               :key="book.id"
                             >
                               <div class="flipbook" :id="book.popup">
-                                <button @click="closeDetails(book.popup)">
-                                  close
+                                <button
+                                  @click="closeDetails(book.popup)"
+                                  class="close-btn-flip"
+                                >
+                                  <i class="fa fa-times" aria-hidden="true"></i>
                                 </button>
                                 <div class="book">
                                   <input
@@ -116,7 +119,10 @@
                                   <div class="pages">
                                     <div class="page1">
                                       <label for="page1"
-                                        ><img :src="book.gambar" alt=""
+                                        ><img
+                                          :src="book.gambar"
+                                          alt=""
+                                          style="transform: rotateY(180deg)"
                                       /></label>
                                     </div>
                                     <div class="page2">
@@ -405,6 +411,8 @@
           closePopup() {
             this.showPopup = false;
           },
+
+          // Flipping Book
           openDetails(id) {
             document.getElementById(id).style.display = "flex";
           },
@@ -424,6 +432,7 @@
             // close popup
             document.getElementById(id).style.display = "none";
           },
+          // Flipping Book
           getCartItems() {
             const cartData = this.getCookie("cart");
             if (cartData) {

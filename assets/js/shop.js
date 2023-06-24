@@ -24,15 +24,15 @@ document.getElementById("page1").addEventListener("change", function () {
   var pages = document.querySelectorAll(".pages div.page1");
   if (this.checked) {
     for (var i = 0; i < pages.length; i++) {
-      pages[i].style.webkitTransform = "rotateY(-140deg)";
-      pages[i].style.MozTransform = "rotateY(-140deg)";
-      pages[i].style.transform = "rotateY(-140deg)";
+      pages[i].style.webkitTransform = "rotateY(-120deg)";
+      pages[i].style.MozTransform = "rotateY(-120deg)";
+      pages[i].style.transform = "rotateY(-120deg)";
     }
   } else {
     for (var i = 0; i < pages.length; i++) {
-      pages[i].style.webkitTransform = "rotateY(-34deg)";
-      pages[i].style.MozTransform = "rotateY(-34deg)";
-      pages[i].style.transform = "rotateY(-34deg)";
+      pages[i].style.webkitTransform = "rotateY(-26deg)";
+      pages[i].style.MozTransform = "rotateY(-26deg)";
+      pages[i].style.transform = "rotateY(-26deg)";
     }
   }
 });
@@ -41,15 +41,15 @@ document.getElementById("page2").addEventListener("change", function () {
   var pages = document.querySelectorAll(".pages div.page2");
   if (this.checked) {
     for (var i = 0; i < pages.length; i++) {
-      pages[i].style.webkitTransform = "rotateY(-140deg)";
-      pages[i].style.MozTransform = "rotateY(-140deg)";
-      pages[i].style.transform = "rotateY(-140deg)";
+      pages[i].style.webkitTransform = "rotateY(-130deg)";
+      pages[i].style.MozTransform = "rotateY(-130deg)";
+      pages[i].style.transform = "rotateY(-130deg)";
     }
   } else {
     for (var i = 0; i < pages.length; i++) {
-      pages[i].style.webkitTransform = "rotateY(-32deg)";
-      pages[i].style.MozTransform = "rotateY(-32deg)";
-      pages[i].style.transform = "rotateY(-32deg)";
+      pages[i].style.webkitTransform = "rotateY(-28deg)";
+      pages[i].style.MozTransform = "rotateY(-28deg)";
+      pages[i].style.transform = "rotateY(-28deg)";
     }
   }
 });
