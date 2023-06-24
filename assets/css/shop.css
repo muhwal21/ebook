@@ -290,9 +290,12 @@ body textarea {
 
 /* Flipping Books */
 .flipbook {
-    background-color: rgb(0, 0, 0, 0.5);
-    height: 100%;
-    display: flex;
+    background-color: rgb(0, 0, 0, 0);
+    height: auto;
+    width: auto;
+    display: none;
+    position: absolute;
+    z-index: 999;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -305,7 +308,7 @@ body textarea {
   h1 {
     margin: 0;
   }
-  #page1 ~ .pages div.page1 {
+  /* #page1 ~ .pages div.page1 {
     -webkit-transform: rotateY(-34deg);
     -moz-transform: rotateY(-34deg);
     transform: rotateY(-34deg);
@@ -341,12 +344,12 @@ body textarea {
     transform: rotateY(-140deg);
   }
   
-  
+   */
   
   .book {
     position: relative;
-    width: 160px;
-    height: 240px;
+    width: 360px;
+    height: 440px;
     margin-left: 160px;
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
@@ -407,7 +410,8 @@ body textarea {
   }
 
   .pages img {
-    height: 235px;
+    width: 360px;
+    height: 435px;
     margin-top:5px;
     border-radius: 0px 4px 4px 0px;
   }

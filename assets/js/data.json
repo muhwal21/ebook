@@ -6,7 +6,8 @@
     "deskripsi": "Deskripsi Buku 1",
     "harga": 100000,
     "kategori": "Fiksi",
-    "quantity": 0
+    "quantity": 0,
+    "popup" :"popup"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "deskripsi": "Deskripsi Buku 2",
     "harga": 150000,
     "kategori": "Non-Fiksi",
-    "quantity": 0
+    "quantity": 0,
+    "popup" :"popup1"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "deskripsi": "Deskripsi Buku 3",
     "harga": 80000,
     "kategori": "Fiksi",
-    "quantity": 0
+    "quantity": 0,
+    "popup" :"popup2"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "deskripsi": "Deskripsi Buku 4",
     "harga": 180000,
     "kategori": "Fiksi",
-    "quantity": 0
+    "quantity": 0,
+    "popup" :"popup3"
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "deskripsi": "Deskripsi Buku 5",
     "harga": 300000,
     "kategori": "Fiksi",
-    "quantity": 0
+    "quantity": 0,
+    "popup" :"popup4"
   },
   {
     "id": 6,
@@ -51,6 +56,7 @@
     "deskripsi": "Deskripsi Buku 6",
     "harga": 2300000,
     "kategori": "Fiksi",
-    "quantity": 0
+    "quantity": 0,
+    "popup" :"popup5"
   }
 ]
