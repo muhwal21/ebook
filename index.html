@@ -12,6 +12,8 @@
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet preload" as="style" href="assets/css/preload.min.css" />
+  <link rel="stylesheet preload" as="style" href="assets/css/icomoon.css" />
 
   <!-- VueJS -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -48,10 +50,156 @@
 <body>
   <div id="preloader"></div>
   <main-header></main-header>
+
+  <!-- Hero section start -->
+  <section class="hero">
+    <div class="container d-xl-flex align-items-start">
+      <div class="hero_about col-xl-6">
+        <div class="hero_header">
+          <h1 class="hero_header-title">Check Our New Books</h1>
+          <p class="hero_header-text">
+            Temukan buku-buku terbaik untuk mengasah kemampuan public speaking Anda di Dialogika. Kami siap membantu Anda menjadi seorang pembicara yang percaya diri, menginspirasi, dan mempengaruhi dunia. Mulailah perjalanan Anda sekarang!
+          </p>
+          <a class="hero_header-btn btn" href="#tab1">Shop Now</a>
+        </div>
+        <div class="hero_contacts">
+          <p class="hero_contacts-text">Our support team is available 24/7 to resolve any product issues</p>
+          <span class="hero_contacts-data d-flex flex-column flex-sm-row align-items-center">
+            <span class="icon d-flex align-items-center justify-content-center">
+              <i class="icon-call"></i>
+            </span>
+            <span class="d-flex flex-column">
+              <span>Phone number</span>
+              <a class="link" href="tel:+1234567890">+62 851-6299-2597</a>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="hero_promo col-xl-6">
+        <div class="hero_promo-underlay"></div>
+        <div class="hero_promo-underlay--highlight"></div>
+        <div class="hero_slider swiper">
+          <div class="swiper-wrapper">
+            <div
+              class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
+              <div class="hero_slider-slide_media">
+                <picture>
+                  <source data-srcset="img/placeholder.jpg" srcset="https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg" type="image/webp" />
+                  <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                </picture>
+              </div>
+              <div class="hero_slider-slide_main">
+                <h2 class="title">Judul Buku 1</h2>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing illum vero itaque adipisci ipsa sit praesentium ullam.
+                </p>
+                <ul class="list">
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Mengatasi Grogi
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Lancar Public Speaking
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Menjadi Ganteng
+                  </li>
+                </ul>
+                <a class="btn--underline" href="#">About Product</a>
+              </div>
+            </div>
+            <div
+              class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
+              <div class="hero_slider-slide_media">
+                <picture>
+                  <source data-srcset="img/placeholder.jpg" srcset="https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg" type="image/webp" />
+                  <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                </picture>
+              </div>
+              <div class="hero_slider-slide_main">
+                <h2 class="title">Judul Buku 2</h2>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing illum vero itaque adipisci ipsa sit praesentium ullam.
+                </p>
+                <ul class="list">
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Menjadi Ganteng
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Mengatasi Grogi
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Lancar Public Speaking
+                  </li>
+                </ul>
+                <a class="btn--underline" href="#">About Product</a>
+              </div>
+            </div>
+            <div
+              class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
+              <div class="hero_slider-slide_media">
+                <picture>
+                  <source data-srcset="img/placeholder.jpg" srcset="https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg" type="image/webp" />
+                  <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                </picture>
+              </div>
+              <div class="hero_slider-slide_main">
+                <h2 class="title">Judul Buku 3</h2>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing illum vero itaque adipisci ipsa sit praesentium ullam.
+                </p>
+                <ul class="list">
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Lancar Public Speaking
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Bisa Lompat Tinggi
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Menjadi Ganteng
+                  </li>
+                </ul>
+                <a class="btn--underline" href="#">About Product</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-pagination swiper-pagination d-sm-flex flex-column"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero section end -->
+
   <!-- Start of shop product section
 		============================================= -->
   <section id="shop-product" class="shop-product-section">
-    <div class="container" style="margin-top: 50px">
+    <div class="container">
       <div class="product-item">
         <div id="app">
           <div class="row">
@@ -457,7 +605,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/component/headerfooter.js"></script>
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/index.min.js"></script>
   <script>
     $(".mobile-nav-toggle").on("click", function (e) {
       $("#sidebar-mobile").offcanvas("show");
