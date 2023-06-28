@@ -45,6 +45,7 @@
   <!-- css here -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/shop.css" />
+  <link rel="stylesheet" href="assets/css/new.css">
 </head>
 
 <body>
@@ -58,7 +59,9 @@
         <div class="hero_header">
           <h1 class="hero_header-title">Check Our New Books</h1>
           <p class="hero_header-text">
-            Temukan buku-buku terbaik untuk mengasah kemampuan public speaking Anda di Dialogika. Kami siap membantu Anda menjadi seorang pembicara yang percaya diri, menginspirasi, dan mempengaruhi dunia. Mulailah perjalanan Anda sekarang!
+            Temukan buku-buku terbaik untuk mengasah kemampuan public speaking Anda di Dialogika. Kami siap membantu
+            Anda menjadi seorang pembicara yang percaya diri, menginspirasi, dan mempengaruhi dunia. Mulailah perjalanan
+            Anda sekarang!
           </p>
           <a class="hero_header-btn btn" href="#tab1">Shop Now</a>
         </div>
@@ -84,14 +87,17 @@
               class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
               <div class="hero_slider-slide_media">
                 <picture>
-                  <source data-srcset="img/placeholder.jpg" srcset="https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg" type="image/webp" />
+                  <source data-srcset="img/placeholder.jpg"
+                    srcset="https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg"
+                    type="image/webp" />
                   <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
                 </picture>
               </div>
               <div class="hero_slider-slide_main">
                 <h2 class="title">Judul Buku 1</h2>
                 <p class="text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing illum vero itaque adipisci ipsa sit praesentium ullam.
+                  Lorem ipsum dolor sit amet consectetur adipisicing illum vero itaque adipisci ipsa sit praesentium
+                  ullam.
                 </p>
                 <ul class="list">
                   <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
@@ -120,14 +126,16 @@
               class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
               <div class="hero_slider-slide_media">
                 <picture>
-                  <source data-srcset="img/placeholder.jpg" srcset="https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg" type="image/webp" />
+                  <source data-srcset="img/placeholder.jpg"
+                    srcset="https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg" type="image/webp" />
                   <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
                 </picture>
               </div>
               <div class="hero_slider-slide_main">
                 <h2 class="title">Judul Buku 2</h2>
                 <p class="text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing illum vero itaque adipisci ipsa sit praesentium ullam.
+                  Lorem ipsum dolor sit amet consectetur adipisicing illum vero itaque adipisci ipsa sit praesentium
+                  ullam.
                 </p>
                 <ul class="list">
                   <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
@@ -156,14 +164,16 @@
               class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
               <div class="hero_slider-slide_media">
                 <picture>
-                  <source data-srcset="img/placeholder.jpg" srcset="https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg" type="image/webp" />
+                  <source data-srcset="img/placeholder.jpg"
+                    srcset="https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg" type="image/webp" />
                   <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
                 </picture>
               </div>
               <div class="hero_slider-slide_main">
                 <h2 class="title">Judul Buku 3</h2>
                 <p class="text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing illum vero itaque adipisci ipsa sit praesentium ullam.
+                  Lorem ipsum dolor sit amet consectetur adipisicing illum vero itaque adipisci ipsa sit praesentium
+                  ullam.
                 </p>
                 <ul class="list">
                   <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
@@ -274,13 +284,49 @@
               <div class="side-bar-widget first-widget">
                 <h2 class="widget-title text-capitalize">Keranjang buku</h2>
                 <div class="post-categori ul-li-block">
-                  <button @click="openPopup" class="tp-btn">
+                  <button href="#ltn__utilize-cart-menu" class="tp-btn ltn__utilize-toggle">
                     Lihat Keranjang
                   </button>
                 </div>
               </div>
               <div>
                 <!-- Tombol Lihat Keranjang -->
+
+                <!-- Utilize Cart Menu Start -->
+                <div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+                  <div class="ltn__utilize-menu-inner ltn__scrollbar">
+                    <div class="ltn__utilize-menu-head">
+                      <span class="ltn__utilize-menu-title">Cart</span>
+                      <button class="ltn__utilize-close">×</button>
+                    </div>
+                    <div class="mini-cart-product-area ltn__scrollbar">
+                      <div v-for="item in cartItems" :key="item.id" class="mini-cart-item clearfix">
+                        <div class="mini-cart-img">
+                          <a><img :src="getProductImage(item)" alt="Product Image"></a>
+                          <span @click="removeFromCart(item.id)" id="remove" class="mini-cart-item-delete"><i
+                              class="fa-light fa-trash"></i></span>
+                        </div>
+                        <div class="mini-cart-info">
+                          <h6><a>{{ item.judul }}</a></h6>
+                          <span class="mini-cart-quantity">{{ item.quantity }} = {{ formatCurrency(item.harga *
+                            item.quantity) }}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mini-cart-footer">
+                      <div class="mini-cart-sub-total">
+                        <h5>Subtotal: <span>{{ formatCurrency(calculateOverallTotal()) }}</span></h5>
+                      </div>
+                      <div class="btn-wrapper">
+                        <!-- <a href="#" class="theme-btn-1 btns btn-effect-1">Close</a> -->
+                        <a onclick="checkout()" class="theme-btn-2 btns btn-effect-2">Checkout</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Utilize Cart Menu End -->
+                <div class="ltn__utilize-overlay"></div>
 
                 <!-- Popup Keranjang -->
                 <div v-if="showPopup" class="popup">
@@ -606,6 +652,7 @@
   <script src="assets/js/component/headerfooter.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/index.min.js"></script>
+  <script src="assets/js/cart.js"></script>
   <script>
     $(".mobile-nav-toggle").on("click", function (e) {
       $("#sidebar-mobile").offcanvas("show");
