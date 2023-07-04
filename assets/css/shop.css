@@ -237,6 +237,8 @@ body textarea {
   background: transparent;
   outline: none;
   border: none;
+  float: right;
+  padding-right: 5px;
 }
 .close-btn:hover .fa.fa-times {
   font-size: 25px;
@@ -307,6 +309,8 @@ body textarea {
   background: #ffffff;
   display: flex;
   width: 50%;
+  padding-bottom: 20px;
+  border-radius: 5px;
 }
 .detail-popup-content{
   background-color: transparent;
