@@ -458,11 +458,12 @@
                     <div class="ltn__utilize-menu-inner ltn__scrollbar">
                       <div class="ltn__utilize-menu-head">
                         <span class="ltn__utilize-menu-title">Cart</span>
-                        <button
-                          @click="closeDetails(book.popup)"
-                          class="close-btn-flip"
-                        >
-                          <i class="fa fa-times" aria-hidden="true"></i>
+                        <button class="ltn__utilize-close">
+                          <i
+                            class="fa fa-times"
+                            aria-hidden="true"
+                            style="color: black; font-size: 20px"
+                          ></i>
                         </button>
                       </div>
                       <div class="mini-cart-product-area ltn__scrollbar">
@@ -533,7 +534,7 @@
                   <div class="ltn__utilize-overlay"></div>
 
                   <!-- Popup Keranjang -->
-                  <div v-if="showPopup" class="popup">
+                  <!-- <div v-if="showPopup" class="popup">
                     <div class="popup-content">
                       <h3>Keranjang</h3>
                       <button @click="closePopup" class="close-btn">
@@ -545,10 +546,10 @@
                             :src="getProductImage(item)"
                             alt="Product Image"
                             style="width: 50px"
-                          />
-                          <!--  tambahkan script ini jika ingin mengambil gambar lokal assets/img/product/' + -->
+                          /> -->
+                  <!--  tambahkan script ini jika ingin mengambil gambar lokal assets/img/product/' + -->
 
-                          {{ item.judul }} <br /><small>X </small>
+                  <!-- {{ item.judul }} <br /><small>X </small>
                           {{ item.quantity }} = {{ formatCurrency(item.harga *
                           item.quantity) }}
                           <button @click="removeFromCart(item.id)" id="remove">
@@ -572,7 +573,7 @@
                         </button>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="checkout-form" id="checkout">
                     <form id="checkoutForm" @submit="submitCheckout">
                       <h3>Form Checkout</h3>
