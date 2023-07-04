@@ -224,9 +224,11 @@ body textarea {
   transform: translateY(-40px);
 }
 .close-btn-flip {
+  float: right;
   outline: none;
   border: none;
   background: transparent;
+  margin: 5px;
 }
 
 .fa.fa-times {
@@ -286,7 +288,7 @@ body textarea {
   }
 }
 
-/* Flipping Books */
+/* popup Books */
 .flipbook {
   background-color: rgb(0, 0, 0, 0.5);
   height: 100%;
@@ -301,179 +303,35 @@ body textarea {
   flex-direction: column;
 }
 
-input[type="checkbox"] {
-  display: none;
+.book-detail-popup{
+  backdrop-filter: blur(2px) saturate(167%);
+    -webkit-backdrop-filter: blur(2px) saturate(167%);
+    background-color: rgba(16, 87, 157, 0.51);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+  display: flex;
+  width: 50%;
+  height: 60%;
 }
-
-h1 {
-  margin: 0;
-}
-
-.book {
-  position: relative;
-  width: 360px;
-  height: 440px;
-  margin-left: 160px;
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  perspective: 1000px;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-.book .pages,
-.book .pages > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-.book .pages {
-  width: 100%;
-  height: 98%;
-  top: 1%;
-  left: 3%;
-  z-index: 10;
-}
-.book .pages > div {
-  width: 100%;
+.detail-popup-content{
+  background-color: transparent;
+  width: 50%;
   height: 100%;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  transform-origin: left center;
-  -webkit-transition-property: transform;
-  -moz-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-  transition-timing-function: ease;
-  background: -webkit-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
-  background: -moz-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
-  background: -ms-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
-  background: linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
-  box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1),
-    inset -1px 0px 1px rgba(150, 150, 150, 0.2);
-  border-radius: 0px 5px 5px 0px;
-  -webkit-transition-duration: 1s;
-}
-.book .pages > div:hover {
-  box-shadow: inset 1px 0px 2px rgba(50, 50, 50, 0.1),
-    inset -3px 1px 1px rgba(150, 150, 150, 0.2);
-}
-.book .pages > div label {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+  color: white;
   text-align: center;
-  vertical-align: middle;
 }
-
-.pages img {
-  width: 360px;
-  height: 435px;
-  margin-top: 5px;
-  border-radius: 0px 4px 4px 0px;
+.detail-popup-content h5{
+  margin-top: 40px;
 }
-.page2 p {
-  font-family: "Libre Caslon Display", serif;
-  font-size: 8px;
-  padding: 0px 10px;
+.detail-popup-img{
+  width: 50%;
+  height: 100%;
 }
-
-.page2 h3 {
-  font-family: "Libre Caslon Display", serif;
-  font-size: 15px;
+.detail-popup-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
 }
-
-/* Book Mobile */
-@media only screen and (max-width: 600px) {
-  .book {
-    position: relative;
-    width: 80vw;
-    height: 60vh;
-    margin-left: 75%;
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    perspective: 1000px;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-  .book .pages,
-  .book .pages > div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-  .book .pages {
-    width: 50%;
-    height: 48%;
-    top: 1%;
-    left: 3%;
-    z-index: 10;
-  }
-  .book .pages > div {
-    width: 100%;
-    height: 100%;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    transform-origin: left center;
-    -webkit-transition-property: transform;
-    -moz-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-timing-function: ease;
-    -moz-transition-timing-function: ease;
-    transition-timing-function: ease;
-    background: -webkit-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
-    background: -moz-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
-    background: -ms-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
-    background: linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
-    box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1),
-      inset -1px 0px 1px rgba(150, 150, 150, 0.2);
-    border-radius: 0px 5px 5px 0px;
-    -webkit-transition-duration: 1s;
-  }
-  .book .pages > div:hover {
-    box-shadow: inset 1px 0px 2px rgba(50, 50, 50, 0.1),
-      inset -3px 1px 1px rgba(150, 150, 150, 0.2);
-  }
-  .book .pages > div label {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  .pages img {
-    width: 100%;
-    height: 100%;
-    margin-top: 5px;
-    border-radius: 0px 4px 4px 0px;
-  }
-  .page2 p {
-    font-family: "Libre Caslon Display", serif;
-    font-size: 8px;
-    padding: 0px 10px;
-  }
-
-  .page2 h3 {
-    font-family: "Libre Caslon Display", serif;
-    font-size: 15px;
-  }
-}
-/* End Book Mobile */
 /* End Flipping Books */
 
 .hero {
@@ -901,3 +759,41 @@ h2 {
   -webkit-animation: 0.5s ease-in-out underline;
   animation: 0.5s ease-in-out underline;
 }
+/* plus minus btn */
+.valuenum{
+  display: flex;
+  align-items: center;
+}
+.valuenum input[type="number"]::-webkit-inner-spin-button,
+.valuenum input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.valuenum button{
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.valuenum i{
+  color: rgb(250, 175, 63);
+}
+.valuenum input[type="number"]{
+      background: transparent;
+      color: rgb(250, 175, 63);
+      text-align: center;
+        /* border: 1px solid #eaedff; */
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgb(250, 175, 63);
+        border-radius: 0px;
+        height: 45px;
+        padding: 0 0 0 0px;
+        width: 100%;
+        outline: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+}
+/* end plus minus btn */

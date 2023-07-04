@@ -9583,11 +9583,14 @@ article:nth-child(6) {
 .card__precis {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   transition: .5s;
 }
 
+.card__precis a{
+  transform: translateX(40px);
+}
 .card__preci {
   display: block;
   text-align: center;
