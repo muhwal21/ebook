@@ -125,8 +125,28 @@ h4 {
     }
 }
 /* keranjang buku */
-#cart-header{
-  visibility: hidden;
+#cart-header {
+  visibility: visible;
+}
+
+#cart-header button {
+  width: 88px;
+  height: 30px;
+  transform: translateY(-4.5px);
+  background: transparent;
+  padding: 0px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+#cart-header i {
+  color: #10579D;
+  font-size: 20px;
+}
+
+.side-bar-widget {
+  visibility: visible;
 }
 @media only screen and (max-width: 600px) {
   #cart-header{
