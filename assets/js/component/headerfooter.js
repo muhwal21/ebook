@@ -195,15 +195,14 @@ class Header extends HTMLElement {
       </nav>
       <!-- .navbar -->
 
-      <a href="../promo/" target="__blank" class="blue-btn position-relative"><span class="d-none d-md-inline">
-          Claim</span> Promo
-        <span class="position-absolute top-0 start-70 translate-middle badge rounded-pill bg-danger">
-          <i class='bx bxs-alarm-exclamation bx-tada'></i>
-          <em class="countdown" data-count="2025/12/2" data-template="&nbsp;%m:%s"
-            style="font-family: 'Nunito',sans-serif;font-style: normal;"></em>
-          <span class="visually-hidden">unread messages</span>
-        </span>
-      </a>
+      <div class="post-categori ul-li-block" style="border:none;outline:none;">
+                    <button style="width: 100px;height: 30px;background:transparent; padding:0px;border:none;outline:none;box-shadow:none;"
+                      href="#ltn__utilize-cart-menu"
+                      class="tp-btn ltn__utilize-toggle"
+                    >
+                      <i class="fa-solid fa-cart-shopping" style="color: #10579D;font-size:20px;"></i>
+                    </button>
+                  </div>
     </div>
   </header><!-- End Header -->
 
