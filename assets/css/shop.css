@@ -124,6 +124,31 @@ h4 {
       overflow-y: scroll;
     }
 }
+/* keranjang buku */
+#cart-header{
+  visibility: hidden;
+}
+@media only screen and (max-width: 600px) {
+  #cart-header{
+    visibility: visible;
+  }
+  #cart-header button{
+    width: 100px;
+      height: 30px;
+      background: transparent;
+      padding: 0px;
+      border: none;
+      outline: none;
+      box-shadow: none;
+  }
+  #cart-header i{
+    color: #10579D;font-size:20px;
+  }
+  .side-bar-widget{
+    visibility: hidden;
+  }
+}
+/* end keranjang */
 .checkout-form button {
   background-color: rgb(62, 116, 251);
   color: #fff;

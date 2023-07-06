@@ -195,12 +195,12 @@ class Header extends HTMLElement {
       </nav>
       <!-- .navbar -->
 
-      <div class="post-categori ul-li-block" style="border:none;outline:none;">
-                    <button style="width: 100px;height: 30px;background:transparent; padding:0px;border:none;outline:none;box-shadow:none;"
+      <div class="post-categori ul-li-block" id="cart-header">
+                    <button
                       href="#ltn__utilize-cart-menu"
                       class="tp-btn ltn__utilize-toggle"
                     >
-                      <i class="fa-solid fa-cart-shopping" style="color: #10579D;font-size:20px;"></i>
+                      <i class="fa-solid fa-cart-shopping"></i>
                     </button>
                   </div>
     </div>
