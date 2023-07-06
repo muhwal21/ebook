@@ -110,6 +110,18 @@ h4 {
   align-items: center;
   z-index: 100000;
 }
+@media only screen and (max-width: 600px) {
+  
+  form {
+      max-width: 80%;
+      transform: translateY(-150px);
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+}
 .checkout-form button {
   background-color: rgb(62, 116, 251);
   color: #fff;
