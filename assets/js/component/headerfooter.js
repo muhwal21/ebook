@@ -136,38 +136,10 @@ class Header extends HTMLElement {
           <li class="dropdown"><a href="../service/"><span>Service</span><i class='bx bx-chevron-down-circle'></i></a>
             <ul>
               <li class="dropdown">
-                <a href="../service/counseling/"><span>Counseling</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="../service/counseling/relationship.html">
-                      <span>Relationship
-                        <sup>&nbsp;</sup>
-                      </span>
-                    </a></li>
-                  <li><a href="../service/counseling/parenting.html">
-                      <span>Parenting
-                        <sup>&nbsp;</sup>
-                      </span>
-                    </a></li>
-                  <li><a href="../service/counseling/children.html">
-                      <span>Children
-                        <sup>&nbsp;</sup>
-                      </span>
-                    </a></li>
-                  <li class="dropdown-divider"></li>
-                  <li><a href="../service/counseling/request.html">
-                      <span>Request</span>
-                    </a></li>
-                </ul>
+                <a href="../service/counseling/"><span>Counseling</span></a>
+                
               </li>
-              <li class="dropdown">
-                <a href="../service/mentoring/"><span>Mentoring</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="../service/mentoring/teenager.html"><span>Teenager</span></a></li>
-                  <li><a href="../service/mentoring/self-development.html"><span>Self Development</span></a></li>
-                  <li class="dropdown-divider"></li>
-                  <li><a href="../service/mentoring/request.html"><span>Request</span></a></li>
-                </ul>
-              </li>
+              
               <li class="dropdown">
                 <a href="../service/agency/"><span>Agency</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
@@ -583,36 +555,7 @@ class Footer extends HTMLElement {
 
             <div class="widget d-none d-md-block">
               <h4>Counseling</h4>
-              <ul>
-                <li><i class="bx bx-chevron-right"></i>
-                  <a href="../service/counseling/relationship.html">Relationship</a>
-                </li>
-                <li><i class="bx bx-chevron-right"></i>
-                  <a href="../service/counseling/parenting.html">Parenting</a>
-                </li>
-                <li><i class="bx bx-chevron-right"></i>
-                  <a href="../service/counseling/kids.html">Children</a>
-                </li>
-              </ul>
-              <br>
-            </div>
-            <div class="d-block d-md-none">
-              <a href="#footer-counseling-program" class="d-flex justify-content-between" data-bs-toggle="collapse"
-                id="footer-accordion">
-                <h4>Counseling</h4><i class='bx bx-chevron-down d-md-none'></i>
-              </a>
-              <ul class="accordion-collapse collapse show" id="footer-counseling-program"
-                data-bs-parent=".footer-links">
-                <li><i class="bx bx-chevron-right"></i>
-                  <a href="../service/counseling/relationship.html">Relationship</a>
-                </li>
-                <li><i class="bx bx-chevron-right"></i>
-                  <a href="../service/counseling/parenting.html">Parenting</a>
-                </li>
-                <li><i class="bx bx-chevron-right"></i>
-                  <a href="../service/counseling/kids.html">Children</a>
-                </li>
-              </ul>
+              
               <br>
             </div>
 
