@@ -157,6 +157,7 @@ h4 {
       height: 30px;
       background: transparent;
       padding: 0px;
+      transform: translateY(0.5px);
       border: none;
       outline: none;
       box-shadow: none;
