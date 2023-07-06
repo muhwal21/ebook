@@ -3,8 +3,9 @@
     "id": 1,
     "gambar": "https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg",
     "judul": "Buku 1",
-    "deskripsi": "Deskripsi Buku 1",
+    "deskripsi": "'Ten Thousand Skies Above You's karya Claudia Gray adalah buku kedua dalam seri Firebird. Marguerite Caine, seorang pelompat dimensi, berpetualang melintasi alam semesta untuk menyelamatkan orang yang dicintainya. Di tengah cinta dan tugasnya, Marguerite menghadapi pilihan sulit dan menghadapi konsekuensi. Dengan alam semesta yang kaya dan plot yang menarik, buku ini memadukan petualangan dan romansa dengan perjalanan emosional yang menggugah.",
     "harga": 100000,
+    "diskon":50000,
     "kategori": "Fiksi",
     "quantity": 0,
     "popup" :"popup"
@@ -15,6 +16,7 @@
     "judul": "Buku 2",
     "deskripsi": "Deskripsi Buku 2",
     "harga": 150000,
+    "diskon":50000,
     "kategori": "Non-Fiksi",
     "quantity": 0,
     "popup" :"popup1"
@@ -25,6 +27,7 @@
     "judul": "Buku 3",
     "deskripsi": "Deskripsi Buku 3",
     "harga": 80000,
+    "diskon":50000,
     "kategori": "Fiksi",
     "quantity": 0,
     "popup" :"popup2"
@@ -35,6 +38,7 @@
     "judul": "Buku 4",
     "deskripsi": "Deskripsi Buku 4",
     "harga": 180000,
+    "diskon":50000,
     "kategori": "Fiksi",
     "quantity": 0,
     "popup" :"popup3"
@@ -45,6 +49,7 @@
     "judul": "Buku 5",
     "deskripsi": "Deskripsi Buku 5",
     "harga": 300000,
+    "diskon":50000,
     "kategori": "Fiksi",
     "quantity": 0,
     "popup" :"popup4"
@@ -55,6 +60,7 @@
     "judul": "Buku 6",
     "deskripsi": "Deskripsi Buku 6",
     "harga": 230000,
+    "diskon":50000,
     "kategori": "Fiksi",
     "quantity": 0,
     "popup" :"popup5"

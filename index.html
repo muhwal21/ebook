@@ -364,14 +364,22 @@
                                                 </div>
                                                 <div class="price-box">
                                                   <span class="regular-price"
-                                                    >{{ formatCurrency(book.harga) }}</span
+                                                    >{{
+                                                    formatCurrency(book.harga -
+                                                    book.diskon) }}</span
                                                   >
+                                                  &nbsp;
                                                   <span
                                                     class="old-price"
                                                     style="color: red"
-                                                    ><del>Rp.300.000</del></span
+                                                    ><del
+                                                      >{{
+                                                      formatCurrency(book.diskon)
+                                                      }}</del
+                                                    ></span
                                                   >
                                                 </div>
+                                                <br />
                                                 <p class="desc-content">
                                                   {{ book.deskripsi }}
                                                 </p>
@@ -412,10 +420,14 @@
                                     <div>
                                       <span
                                         class="card__preci card__preci--before"
-                                        ><strike>Rp.500.000</strike></span
+                                        ><strike
+                                          >{{ formatCurrency( book.diskon)
+                                          }}</strike
+                                        ></span
                                       >
                                       <span class="card__preci card__preci--now"
-                                        >{{ formatCurrency(book.harga) }}</span
+                                        >{{ formatCurrency(book.harga -
+                                        book.diskon) }}</span
                                       >
                                     </div>
                                     <a
@@ -489,8 +501,8 @@
                             <h6><a>{{ item.judul }}</a></h6>
                             <span class="mini-cart-quantity"
                               >x{{ item.quantity }} = {{
-                              formatCurrency(item.harga * item.quantity)
-                              }}</span
+                              formatCurrency((item.harga - item.diskon) *
+                              item.quantity) }}</span
                             >
                           </div>
                           <div class="valuenum">
@@ -614,8 +626,17 @@
                       <h5>Detail Pembelian</h5>
                       <ul>
                         <li v-for="item in cartItems" :key="item.id">
-                          {{ item.judul }} x {{ item.quantity }} = {{
-                          formatCurrency(item.harga * item.quantity) }}
+                          {{ item.judul }} x {{ item.quantity }}
+                          <br />
+                          =
+                          <small
+                            ><strike
+                              >{{ formatCurrency((item.harga) * item.quantity)
+                              }}</strike
+                            ></small
+                          >
+                          {{ formatCurrency((item.harga - item.diskon) *
+                          item.quantity) }}
                         </li>
                       </ul>
                       <div class="footer-form">
@@ -693,6 +714,7 @@
                 gambar: book.gambar,
                 judul: book.judul,
                 harga: book.harga,
+                diskon: book.diskon,
                 quantity: 1,
               };
               this.cartItems.push(cartItem);
@@ -785,7 +807,7 @@
             let total = 0;
             for (const item of this.cartItems) {
               if (item.judul === book.judul) {
-                total += item.harga * item.quantity;
+                total += (item.harga - item.diskon) * item.quantity;
               }
             }
             return total;
@@ -813,8 +835,10 @@
       ${this.cartItems
         .map(
           (item) =>
-            `${item.judul} x ${item.quantity} = ${this.formatCurrency(
+            `${item.judul} x ${item.quantity} =  ~${this.formatCurrency(
               item.harga * item.quantity
+            )}~ ${this.formatCurrency(
+              (item.harga - item.diskon) * item.quantity
             )}`
         )
         .join("\n")}
@@ -826,7 +850,7 @@
             const formData = new FormData();
             formData.append("message", message);
 
-            const whatsappLink = `https://wa.me/6285727442718?text=${encodeURIComponent(
+            const whatsappLink = `https://wa.me/685162992597?text=${encodeURIComponent(
               message
             )}`;
             window.open(whatsappLink, "_blank");
