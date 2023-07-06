@@ -1497,7 +1497,7 @@ mark {
 }
 
 .flosun-button.button-icon.dark-btn {
-  background: #000000;
+  background: rgb(16, 87, 157);
   color: #ffffff;
   border-radius: 0%;
 }
@@ -1527,7 +1527,7 @@ mark {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #E72463;
+  background: #faaf3f;
   color: #ffffff;
   z-index: 1;
 }
