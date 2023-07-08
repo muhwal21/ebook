@@ -1,400 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Shop - Pelatihan Public Speaking</title>
-    <meta name="description" content="" />
 
-    <!-- Mobile Specific Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8" />
+  <title>Shop - Pelatihan Public Speaking</title>
+  <meta name="description" content="" />
 
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="assets/img/favicon.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-    />
-    <link
-      rel="stylesheet preload"
-      as="style"
-      href="assets/css/preload.min.css"
-    />
-    <link rel="stylesheet preload" as="style" href="assets/css/icomoon.css" />
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- VueJS -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- Axios -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet preload" as="style" href="assets/css/preload.min.css" />
+  <link rel="stylesheet preload" as="style" href="assets/css/icomoon.css" />
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap"
-      rel="stylesheet"
-    />
+  <!-- VueJS -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <!-- css here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
-    <link rel="stylesheet" href="assets/css/splide.css" />
-    <link rel="stylesheet" href="assets/css/slick.css" />
-    <link rel="stylesheet" href="assets/css/nouislider.css" />
-    <link rel="stylesheet" href="assets/css/datepicker.css" />
-    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
-    <link rel="stylesheet" href="assets/css/flaticon_kleaso.css" />
-    <link rel="stylesheet" href="assets/css/circularProgressBar.css" />
-    <link rel="stylesheet" href="assets/css/spacing.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link href="assets/css/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link href="assets/vendor/epora/css/style.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="assets/vendor/epora/css/font-awesome-pro.css"
-    />
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet" />
 
-    <!-- css here -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/shop.css" />
-    <link rel="stylesheet" href="assets/css/new.css" />
-  </head>
+  <!-- css here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+  <link rel="stylesheet" href="assets/css/splide.css" />
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/nouislider.css" />
+  <link rel="stylesheet" href="assets/css/datepicker.css" />
+  <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="assets/css/flaticon_kleaso.css" />
+  <link rel="stylesheet" href="assets/css/circularProgressBar.css" />
+  <link rel="stylesheet" href="assets/css/spacing.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link href="assets/css/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/epora/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/vendor/epora/css/font-awesome-pro.css" />
 
-  <body>
-    <div id="preloader"></div>
-    <main-header></main-header>
+  <!-- css here -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/shop.css" />
+  <link rel="stylesheet" href="assets/css/new.css" />
+</head>
 
-    <!-- Hero section start -->
-    <section class="hero">
-      <div class="container d-xl-flex align-items-start">
-        <div class="hero_about col-xl-6">
-          <div class="hero_header">
-            <h1 class="hero_header-title">Check Our New Books</h1>
-            <p class="hero_header-text">
-              Temukan buku-buku terbaik untuk mengasah kemampuan public speaking
-              Anda di Dialogika. Kami siap membantu Anda menjadi seorang
-              pembicara yang percaya diri, menginspirasi, dan mempengaruhi
-              dunia. Mulailah perjalanan Anda sekarang!
-            </p>
-            <a class="hero_header-btn btn" href="#tab1">Shop Now</a>
-          </div>
-          <div class="hero_contacts">
-            <p class="hero_contacts-text">
-              Our support team is available 24/7 to resolve any product issues
-            </p>
-            <span
-              class="hero_contacts-data d-flex flex-column flex-sm-row align-items-center"
-            >
-              <span
-                class="icon d-flex align-items-center justify-content-center"
-              >
-                <i class="icon-call"></i>
-              </span>
-              <span class="d-flex flex-column">
-                <span>Phone number</span>
-                <a class="link" href="tel:+1234567890">+62 851-6299-2597</a>
-              </span>
-            </span>
-          </div>
+<body>
+  <div id="preloader"></div>
+  <main-header></main-header>
+
+  <!-- Hero section start -->
+  <section class="hero">
+    <div class="container d-xl-flex align-items-start">
+      <div class="hero_about col-xl-6">
+        <div class="hero_header">
+          <h1 class="hero_header-title">Check Our New Books</h1>
+          <p class="hero_header-text">
+            Temukan buku-buku terbaik untuk mengasah kemampuan public speaking
+            Anda di Dialogika. Kami siap membantu Anda menjadi seorang
+            pembicara yang percaya diri, menginspirasi, dan mempengaruhi
+            dunia. Mulailah perjalanan Anda sekarang!
+          </p>
+          <a class="hero_header-btn btn" href="#tab1">Shop Now</a>
         </div>
-        <div class="hero_promo col-xl-6">
-          <div class="hero_promo-underlay"></div>
-          <div class="hero_promo-underlay--highlight"></div>
-          <div class="hero_slider swiper">
-            <div class="swiper-wrapper">
-              <div
-                class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide"
-              >
-                <div class="hero_slider-slide_media">
-                  <picture>
-                    <source
-                      data-srcset="img/placeholder.jpg"
-                      srcset="
+        <div class="hero_contacts">
+          <p class="hero_contacts-text">
+            Our support team is available 24/7 to resolve any product issues
+          </p>
+          <span class="hero_contacts-data d-flex flex-column flex-sm-row align-items-center">
+            <span class="icon d-flex align-items-center justify-content-center">
+              <i class="icon-call"></i>
+            </span>
+            <span class="d-flex flex-column">
+              <span>Phone number</span>
+              <a class="link" href="tel:+1234567890">+62 851-6299-2597</a>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="hero_promo col-xl-6">
+        <div class="hero_promo-underlay"></div>
+        <div class="hero_promo-underlay--highlight"></div>
+        <div class="hero_slider swiper">
+          <div class="swiper-wrapper">
+            <div
+              class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
+              <div class="hero_slider-slide_media">
+                <picture>
+                  <source data-srcset="img/placeholder.jpg" srcset="
                         https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg
-                      "
-                      type="image/webp"
-                    />
-                    <img
-                      class="lazy"
-                      data-src="img/placeholder.jpg"
-                      src="img/placeholder.jpg"
-                      alt="media"
-                    />
-                  </picture>
-                </div>
-                <div class="hero_slider-slide_main">
-                  <h2 class="title">Judul Buku 1</h2>
-                  <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing illum
-                    vero itaque adipisci ipsa sit praesentium ullam.
-                  </p>
-                  <ul class="list">
-                    <li
-                      class="list-item d-flex align-items-center justify-content-center justify-content-sm-start"
-                    >
-                      <span
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <i class="icon-check"></i>
-                      </span>
-                      Mengatasi Grogi
-                    </li>
-                    <li
-                      class="list-item d-flex align-items-center justify-content-center justify-content-sm-start"
-                    >
-                      <span
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <i class="icon-check"></i>
-                      </span>
-                      Lancar Public Speaking
-                    </li>
-                    <li
-                      class="list-item d-flex align-items-center justify-content-center justify-content-sm-start"
-                    >
-                      <span
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <i class="icon-check"></i>
-                      </span>
-                      Menjadi Ganteng
-                    </li>
-                  </ul>
-                  <a class="btn--underline" href="#">About Product</a>
-                </div>
+                      " type="image/webp" />
+                  <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                </picture>
               </div>
-              <div
-                class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide"
-              >
-                <div class="hero_slider-slide_media">
-                  <picture>
-                    <source
-                      data-srcset="img/placeholder.jpg"
-                      srcset="
-                        https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg
-                      "
-                      type="image/webp"
-                    />
-                    <img
-                      class="lazy"
-                      data-src="img/placeholder.jpg"
-                      src="img/placeholder.jpg"
-                      alt="media"
-                    />
-                  </picture>
-                </div>
-                <div class="hero_slider-slide_main">
-                  <h2 class="title">Judul Buku 2</h2>
-                  <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing illum
-                    vero itaque adipisci ipsa sit praesentium ullam.
-                  </p>
-                  <ul class="list">
-                    <li
-                      class="list-item d-flex align-items-center justify-content-center justify-content-sm-start"
-                    >
-                      <span
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <i class="icon-check"></i>
-                      </span>
-                      Menjadi Ganteng
-                    </li>
-                    <li
-                      class="list-item d-flex align-items-center justify-content-center justify-content-sm-start"
-                    >
-                      <span
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <i class="icon-check"></i>
-                      </span>
-                      Mengatasi Grogi
-                    </li>
-                    <li
-                      class="list-item d-flex align-items-center justify-content-center justify-content-sm-start"
-                    >
-                      <span
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <i class="icon-check"></i>
-                      </span>
-                      Lancar Public Speaking
-                    </li>
-                  </ul>
-                  <a class="btn--underline" href="#">About Product</a>
-                </div>
-              </div>
-              <div
-                class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide"
-              >
-                <div class="hero_slider-slide_media">
-                  <picture>
-                    <source
-                      data-srcset="img/placeholder.jpg"
-                      srcset="
-                        https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg
-                      "
-                      type="image/webp"
-                    />
-                    <img
-                      class="lazy"
-                      data-src="img/placeholder.jpg"
-                      src="img/placeholder.jpg"
-                      alt="media"
-                    />
-                  </picture>
-                </div>
-                <div class="hero_slider-slide_main">
-                  <h2 class="title">Judul Buku 3</h2>
-                  <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing illum
-                    vero itaque adipisci ipsa sit praesentium ullam.
-                  </p>
-                  <ul class="list">
-                    <li
-                      class="list-item d-flex align-items-center justify-content-center justify-content-sm-start"
-                    >
-                      <span
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <i class="icon-check"></i>
-                      </span>
-                      Lancar Public Speaking
-                    </li>
-                    <li
-                      class="list-item d-flex align-items-center justify-content-center justify-content-sm-start"
-                    >
-                      <span
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <i class="icon-check"></i>
-                      </span>
-                      Bisa Lompat Tinggi
-                    </li>
-                    <li
-                      class="list-item d-flex align-items-center justify-content-center justify-content-sm-start"
-                    >
-                      <span
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <i class="icon-check"></i>
-                      </span>
-                      Menjadi Ganteng
-                    </li>
-                  </ul>
-                  <a class="btn--underline" href="#">About Product</a>
-                </div>
+              <div class="hero_slider-slide_main">
+                <h2 class="title">Judul Buku 1</h2>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing illum
+                  vero itaque adipisci ipsa sit praesentium ullam.
+                </p>
+                <ul class="list">
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Mengatasi Grogi
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Lancar Public Speaking
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Menjadi Ganteng
+                  </li>
+                </ul>
+                <a class="btn--underline" href="#">About Product</a>
               </div>
             </div>
             <div
-              class="hero-pagination swiper-pagination d-sm-flex flex-column"
-            ></div>
+              class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
+              <div class="hero_slider-slide_media">
+                <picture>
+                  <source data-srcset="img/placeholder.jpg" srcset="
+                        https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg
+                      " type="image/webp" />
+                  <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                </picture>
+              </div>
+              <div class="hero_slider-slide_main">
+                <h2 class="title">Judul Buku 2</h2>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing illum
+                  vero itaque adipisci ipsa sit praesentium ullam.
+                </p>
+                <ul class="list">
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Menjadi Ganteng
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Mengatasi Grogi
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Lancar Public Speaking
+                  </li>
+                </ul>
+                <a class="btn--underline" href="#">About Product</a>
+              </div>
+            </div>
+            <div
+              class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
+              <div class="hero_slider-slide_media">
+                <picture>
+                  <source data-srcset="img/placeholder.jpg" srcset="
+                        https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg
+                      " type="image/webp" />
+                  <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                </picture>
+              </div>
+              <div class="hero_slider-slide_main">
+                <h2 class="title">Judul Buku 3</h2>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing illum
+                  vero itaque adipisci ipsa sit praesentium ullam.
+                </p>
+                <ul class="list">
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Lancar Public Speaking
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Bisa Lompat Tinggi
+                  </li>
+                  <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <span class="icon d-flex align-items-center justify-content-center">
+                      <i class="icon-check"></i>
+                    </span>
+                    Menjadi Ganteng
+                  </li>
+                </ul>
+                <a class="btn--underline" href="#">About Product</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-pagination swiper-pagination d-sm-flex flex-column"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero section end -->
+
+  <!-- FEATURE AREA START ( Feature - 3) -->
+  <div class="ltn__feature-area mt-100 mt--65">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div
+            class="ltn__feature-item-box-wrap ltn__feature-item-box-wrap-2 ltn__border section-bg-6 position-relative">
+            <div class="ltn__feature-item ltn__feature-item-8">
+              <div class="ltn__feature-icon">
+                <img src="assets/img/icons/svg/8-trolley.svg" alt="#">
+              </div>
+              <div class="ltn__feature-info">
+                <h4>Free shipping</h4>
+                <p>Untuk pesanan diatas Rp.300.000</p>
+              </div>
+            </div>
+            <div class="ltn__feature-item ltn__feature-item-8">
+              <div class="ltn__feature-icon">
+                <img src="assets/img/icons/svg/9-money.svg" alt="#">
+              </div>
+              <div class="ltn__feature-info">
+                <h4>15 days returns</h4>
+                <p>Garansi uang kembali</p>
+              </div>
+            </div>
+            <div class="ltn__feature-item ltn__feature-item-8">
+              <div class="ltn__feature-icon">
+                <img src="assets/img/icons/svg/10-credit-card.svg" alt="#">
+              </div>
+              <div class="ltn__feature-info">
+                <h4>Secure checkout</h4>
+                <p>Transfer aman melalui Bank</p>
+              </div>
+            </div>
+            <div class="ltn__feature-item ltn__feature-item-8">
+              <div class="ltn__feature-icon">
+                <img src="assets/img/icons/svg/11-gift-card.svg" alt="#">
+              </div>
+              <div class="ltn__feature-info">
+                <h4>Offer & gift here</h4>
+                <p>Untuk semua pesanan buku</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Hero section end -->
+    </div>
+  </div>
+  <!-- FEATURE AREA END -->
 
-    <!-- Start of shop product section
+  <!-- Start of shop product section
 		============================================= -->
-    <section id="shop-product" class="shop-product-section">
-      <div class="container">
-        <div class="product-item">
-          <div id="app">
-            <div class="row">
-              <div class="col-md-9">
-                <div class="shop-product-item">
-                  <div class="product-showcase">
-                    <div class="genius-shop-item">
-                      <div class="tab-container">
-                        <div
-                          id="tab1"
-                          class="tab-content-1 best-product-section"
-                        >
-                          <h2 class="widget-title text-capitalize">
-                            Katalog Buku
-                          </h2>
-                          <div class="row">
-                            <div
-                              class="col-md-4"
-                              v-for="book in books"
-                              :key="book.id"
-                            >
-                              <div class="flipbook" :id="book.popup">
-                                <!-- Modal -->
-                                <div class="book-detail-popup">
-                                  <div class="modal-content">
-                                    <button
-                                      @click="closeDetails(book.popup)"
-                                      class="close-btn-flip"
-                                    >
-                                      <i
-                                        class="fa fa-times"
-                                        aria-hidden="true"
-                                      ></i>
-                                    </button>
+  <section id="shop-product" class="shop-product-section">
+    <div class="container">
+      <div class="product-item">
+        <div id="app">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="shop-product-item">
+                <div class="product-showcase">
+                  <div class="genius-shop-item">
+                    <div class="tab-container">
+                      <div id="tab1" class="tab-content-1 best-product-section">
+                        <h2 class="widget-title text-capitalize">
+                          Katalog Buku
+                        </h2>
+                        <div class="row">
+                          <div class="col-md-4" v-for="book in books" :key="book.id">
+                            <div class="flipbook" :id="book.popup">
+                              <!-- Modal -->
+                              <div class="book-detail-popup">
+                                <div class="modal-content">
+                                  <button @click="closeDetails(book.popup)" class="close-btn-flip">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                  </button>
 
-                                    <div class="modal-body">
-                                      <div class="container-fluid custom-area">
-                                        <div class="row">
-                                          <div class="col-md-6 col-custom">
-                                            <div class="modal-product-img">
-                                              <a class="w-100" href="#">
-                                                <img
-                                                  :src="book.gambar"
-                                                  alt=""
-                                                />
-                                              </a>
-                                            </div>
+                                  <div class="modal-body">
+                                    <div class="container-fluid custom-area">
+                                      <div class="row">
+                                        <div class="col-md-6 col-custom">
+                                          <div class="modal-product-img">
+                                            <a class="w-100" href="#">
+                                              <img :src="book.gambar" alt="" />
+                                            </a>
                                           </div>
-                                          <div class="col-md-6 col-custom">
-                                            <div class="modal-product">
-                                              <div class="product-content">
-                                                <div class="product-title">
-                                                  <h4 class="title">
-                                                    {{ book.judul }}
-                                                  </h4>
-                                                </div>
-                                                <div class="price-box">
-                                                  <span class="regular-price"
-                                                    >{{
-                                                    formatCurrency(book.harga -
-                                                    book.diskon) }}</span
-                                                  >
-                                                  &nbsp;
-                                                  <span
-                                                    class="old-price"
-                                                    style="color: red"
-                                                    ><del
-                                                      >{{
-                                                      formatCurrency(book.diskon)
-                                                      }}</del
-                                                    ></span
-                                                  >
-                                                </div>
-                                                <br />
-                                                <p class="desc-content">
-                                                  {{ book.deskripsi }}
-                                                </p>
-                                                <div class="quantity-with-btn">
-                                                  <div class="add-to_btn">
-                                                    <a
-                                                      class="btn product-cart button-icon flosun-button dark-btn"
-                                                      @click="addToCart(book)"
-                                                      >Add to cart</a
-                                                    >
-                                                  </div>
+                                        </div>
+                                        <div class="col-md-6 col-custom">
+                                          <div class="modal-product">
+                                            <div class="product-content">
+                                              <div class="product-title">
+                                                <h4 class="title">
+                                                  {{ book.judul }}
+                                                </h4>
+                                              </div>
+                                              <div class="price-box">
+                                                <span class="regular-price">{{
+                                                  formatCurrency(book.harga -
+                                                  book.diskon) }}</span>
+                                                &nbsp;
+                                                <span class="old-price" style="color: red"><del>{{
+                                                    formatCurrency(book.diskon)
+                                                    }}</del></span>
+                                              </div>
+                                              <br />
+                                              <p class="desc-content">
+                                                {{ book.deskripsi }}
+                                              </p>
+                                              <div class="quantity-with-btn">
+                                                <div class="add-to_btn">
+                                                  <a class="btn product-cart button-icon flosun-button dark-btn"
+                                                    @click="addToCart(book)">Add to cart</a>
                                                 </div>
                                               </div>
                                             </div>
@@ -405,152 +333,105 @@
                                   </div>
                                 </div>
                               </div>
-                              <!-- end modal -->
-                              <main class="main bd-grid">
-                                <article class="card" style="border: none">
-                                  <div class="card__img">
-                                    <img :src="book.gambar" alt="" />
-                                  </div>
-                                  <div
-                                    class="card__name"
-                                    @click="openDetails(book.popup)"
-                                    style="cursor: pointer"
-                                  >
-                                    <p>CLICK HERE FOR DETAIL</p>
-                                  </div>
-
-                                  <h5 class="card__tittle">{{ book.judul }}</h5>
-                                  <div class="card__precis">
-                                    <div>
-                                      <span
-                                        class="card__preci card__preci--before"
-                                        ><strike
-                                          >{{ formatCurrency( book.diskon)
-                                          }}</strike
-                                        ></span
-                                      >
-                                      <span class="card__preci card__preci--now"
-                                        >{{ formatCurrency(book.harga -
-                                        book.diskon) }}</span
-                                      >
-                                    </div>
-                                    <a
-                                      class="card__icon"
-                                      @click="addToCart(book)"
-                                      ><ion-icon name="cart-outline"></ion-icon
-                                    ></a>
-                                  </div>
-                                </article>
-                              </main>
                             </div>
+                            <!-- end modal -->
+                            <main class="main bd-grid">
+                              <article class="card" style="border: none">
+                                <div class="card__img">
+                                  <img :src="book.gambar" alt="" />
+                                </div>
+                                <div class="card__name" @click="openDetails(book.popup)" style="cursor: pointer">
+                                  <p>CLICK HERE FOR DETAIL</p>
+                                </div>
+
+                                <h5 class="card__tittle">{{ book.judul }}</h5>
+                                <div class="card__precis">
+                                  <div>
+                                    <span class="card__preci card__preci--before"><strike>{{ formatCurrency(
+                                        book.diskon)
+                                        }}</strike></span>
+                                    <span class="card__preci card__preci--now">{{ formatCurrency(book.harga -
+                                      book.diskon) }}</span>
+                                  </div>
+                                  <a class="card__icon" @click="addToCart(book)"><ion-icon
+                                      name="cart-outline"></ion-icon></a>
+                                </div>
+                              </article>
+                            </main>
                           </div>
                         </div>
-                        <!-- tab-1 -->
                       </div>
+                      <!-- tab-1 -->
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-3">
-                <div class="side-bar-widget first-widget">
-                  <h2 class="widget-title text-capitalize">Keranjang buku</h2>
-                  <div class="post-categori ul-li-block">
-                    <button
-                      href="#ltn__utilize-cart-menu"
-                      class="tp-btn ltn__utilize-toggle"
-                    >
-                      Lihat Keranjang
-                    </button>
-                  </div>
+            </div>
+            <div class="col-md-3">
+              <div class="side-bar-widget first-widget">
+                <h2 class="widget-title text-capitalize">Keranjang buku</h2>
+                <div class="post-categori ul-li-block">
+                  <button href="#ltn__utilize-cart-menu" class="tp-btn ltn__utilize-toggle">
+                    Lihat Keranjang
+                  </button>
                 </div>
-                <div>
-                  <!-- Tombol Lihat Keranjang -->
+              </div>
+              <div>
+                <!-- Tombol Lihat Keranjang -->
 
-                  <!-- Utilize Cart Menu Start -->
-                  <div
-                    id="ltn__utilize-cart-menu"
-                    class="ltn__utilize ltn__utilize-cart-menu"
-                  >
-                    <div class="ltn__utilize-menu-inner ltn__scrollbar">
-                      <div class="ltn__utilize-menu-head">
-                        <span class="ltn__utilize-menu-title">Cart</span>
-                        <button class="ltn__utilize-close">
-                          <i
-                            class="fa fa-times"
-                            aria-hidden="true"
-                            style="color: black; font-size: 20px"
-                          ></i>
-                        </button>
-                      </div>
-                      <div class="mini-cart-product-area ltn__scrollbar">
-                        <div
-                          v-for="item in cartItems"
-                          :key="item.id"
-                          class="mini-cart-item clearfix"
-                        >
-                          <div class="mini-cart-img">
-                            <a
-                              ><img
-                                :src="getProductImage(item)"
-                                alt="Product Image"
-                            /></a>
-                            <span
-                              @click="removeFromCart(item.id)"
-                              id="remove"
-                              class="mini-cart-item-delete"
-                              ><i class="fa-light fa-trash"></i
-                            ></span>
-                          </div>
-                          <div class="mini-cart-info">
-                            <h6><a>{{ item.judul }}</a></h6>
-                            <span class="mini-cart-quantity"
-                              >x{{ item.quantity }} = {{
-                              formatCurrency((item.harga - item.diskon) *
-                              item.quantity) }}</span
-                            >
-                          </div>
-                          <div class="valuenum">
-                            <button @click="decrement(item)">
-                              <i class="fa fa-minus" aria-hidden="true"></i>
-                            </button>
-                            <input
-                              class="qt"
-                              type="number"
-                              id="inputNumber"
-                              v-model.number="item.quantity"
-                            />
-                            <button @click="increment(item)">
-                              <i class="fa fa-plus" aria-hidden="true"></i>
-                            </button>
-                          </div>
+                <!-- Utilize Cart Menu Start -->
+                <div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+                  <div class="ltn__utilize-menu-inner ltn__scrollbar">
+                    <div class="ltn__utilize-menu-head">
+                      <span class="ltn__utilize-menu-title">Cart</span>
+                      <button class="ltn__utilize-close">
+                        <i class="fa fa-times" aria-hidden="true" style="color: black; font-size: 20px"></i>
+                      </button>
+                    </div>
+                    <div class="mini-cart-product-area ltn__scrollbar">
+                      <div v-for="item in cartItems" :key="item.id" class="mini-cart-item clearfix">
+                        <div class="mini-cart-img">
+                          <a><img :src="getProductImage(item)" alt="Product Image" /></a>
+                          <span @click="removeFromCart(item.id)" id="remove" class="mini-cart-item-delete"><i
+                              class="fa-light fa-trash"></i></span>
                         </div>
-                      </div>
-                      <div class="mini-cart-footer">
-                        <div class="mini-cart-sub-total">
-                          <h5>
-                            Subtotal:
-                            <span
-                              >{{ formatCurrency(calculateOverallTotal())
-                              }}</span
-                            >
-                          </h5>
+                        <div class="mini-cart-info">
+                          <h6><a>{{ item.judul }}</a></h6>
+                          <span class="mini-cart-quantity">x{{ item.quantity }} = {{
+                            formatCurrency((item.harga - item.diskon) *
+                            item.quantity) }}</span>
                         </div>
-                        <div class="btn-wrapper">
-                          <!-- <a href="#" class="theme-btn-1 btns btn-effect-1">Close</a> -->
-                          <a
-                            onclick="checkout()"
-                            class="theme-btn-2 btns btn-effect-2"
-                            >Checkout</a
-                          >
+                        <div class="valuenum">
+                          <button @click="decrement(item)">
+                            <i class="fa fa-minus" aria-hidden="true"></i>
+                          </button>
+                          <input class="qt" type="number" id="inputNumber" v-model.number="item.quantity" />
+                          <button @click="increment(item)">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                          </button>
                         </div>
                       </div>
                     </div>
+                    <div class="mini-cart-footer">
+                      <div class="mini-cart-sub-total">
+                        <h5>
+                          Subtotal:
+                          <span>{{ formatCurrency(calculateOverallTotal())
+                            }}</span>
+                        </h5>
+                      </div>
+                      <div class="btn-wrapper">
+                        <!-- <a href="#" class="theme-btn-1 btns btn-effect-1">Close</a> -->
+                        <a onclick="checkout()" class="theme-btn-2 btns btn-effect-2">Checkout</a>
+                      </div>
+                    </div>
                   </div>
-                  <!-- Utilize Cart Menu End -->
-                  <div class="ltn__utilize-overlay"></div>
+                </div>
+                <!-- Utilize Cart Menu End -->
+                <div class="ltn__utilize-overlay"></div>
 
-                  <!-- Popup Keranjang -->
-                  <!-- <div v-if="showPopup" class="popup">
+                <!-- Popup Keranjang -->
+                <!-- <div v-if="showPopup" class="popup">
                     <div class="popup-content">
                       <h3>Keranjang</h3>
                       <button @click="closePopup" class="close-btn">
@@ -563,9 +444,9 @@
                             alt="Product Image"
                             style="width: 50px"
                           /> -->
-                  <!--  tambahkan script ini jika ingin mengambil gambar lokal assets/img/product/' + -->
+                <!--  tambahkan script ini jika ingin mengambil gambar lokal assets/img/product/' + -->
 
-                  <!-- {{ item.judul }} <br /><small>X </small>
+                <!-- {{ item.judul }} <br /><small>X </small>
                           {{ item.quantity }} = {{ formatCurrency(item.harga *
                           item.quantity) }}
                           <button @click="removeFromCart(item.id)" id="remove">
@@ -590,245 +471,217 @@
                       </div>
                     </div>
                   </div> -->
-                  <div class="checkout-form" id="checkout">
-                    <form id="checkoutForm" @submit="submitCheckout">
-                      <h3>Form Checkout</h3>
-                      <div
-                        onclick="hidePopup()"
-                        id="checkoutclose"
-                        class="close-btn"
-                      >
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                      </div>
-                      <br />
-                      <label for="nama">Nama:</label>
-                      <input
-                        type="text"
-                        id="nama"
-                        v-model="nama"
-                        required
-                      /><br />
-                      <label for="email">E-Mail:</label>
-                      <input
-                        type="text"
-                        id="email"
-                        v-model="email"
-                        required
-                      /><br />
-                      <label for="nomorHp">Nomor HP:</label>
-                      <input
-                        type="text"
-                        id="nomorHp"
-                        v-model="nomorHp"
-                        required
-                      /><br />
+                <div class="checkout-form" id="checkout">
+                  <form id="checkoutForm" @submit="submitCheckout">
+                    <h3>Form Checkout</h3>
+                    <div onclick="hidePopup()" id="checkoutclose" class="close-btn">
+                      <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                    <br />
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" v-model="nama" required /><br />
+                    <label for="email">E-Mail:</label>
+                    <input type="text" id="email" v-model="email" required /><br />
+                    <label for="nomorHp">Nomor HP:</label>
+                    <input type="text" id="nomorHp" v-model="nomorHp" required /><br />
 
-                      <label for="alamat">Alamat:</label>
-                      <textarea id="alamat" v-model="alamat" required></textarea
-                      ><br />
+                    <label for="alamat">Alamat:</label>
+                    <textarea id="alamat" v-model="alamat" required></textarea><br />
 
-                      <h5>Detail Pembelian</h5>
-                      <ul>
-                        <li v-for="item in cartItems" :key="item.id">
-                          {{ item.judul }} x {{ item.quantity }}
-                          <br />
-                          =
-                          <small
-                            ><strike
-                              >{{ formatCurrency((item.harga) * item.quantity)
-                              }}</strike
-                            ></small
-                          >
-                          {{ formatCurrency((item.harga - item.diskon) *
-                          item.quantity) }}
-                        </li>
-                      </ul>
-                      <div class="footer-form">
-                        <h5>
-                          Total: {{ formatCurrency(calculateOverallTotal()) }}
-                        </h5>
+                    <h5>Detail Pembelian</h5>
+                    <ul>
+                      <li v-for="item in cartItems" :key="item.id">
+                        {{ item.judul }} x {{ item.quantity }}
+                        <br />
+                        =
+                        <small><strike>{{ formatCurrency((item.harga) * item.quantity)
+                            }}</strike></small>
+                        {{ formatCurrency((item.harga - item.diskon) *
+                        item.quantity) }}
+                      </li>
+                    </ul>
+                    <div class="footer-form">
+                      <h5>
+                        Total: {{ formatCurrency(calculateOverallTotal()) }}
+                      </h5>
 
-                        <button
-                          type="submit"
-                          id="checkoutsubmit"
-                          class="tp-btn"
-                        >
-                          Checkout
-                        </button>
-                      </div>
-                    </form>
-                  </div>
+                      <button type="submit" id="checkoutsubmit" class="tp-btn">
+                        Checkout
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script>
-      const { createApp } = Vue;
+  <script>
+    const { createApp } = Vue;
 
-      createApp({
-        data() {
-          return {
-            books: [],
-            showPopup: false,
-            cartItems: [],
-            nama: "",
-            nomorHp: "",
-            alamat: "",
-            buktiTransfer: null,
-          };
+    createApp({
+      data() {
+        return {
+          books: [],
+          showPopup: false,
+          cartItems: [],
+          nama: "",
+          nomorHp: "",
+          alamat: "",
+          buktiTransfer: null,
+        };
+      },
+      mounted() {
+        // Mengambil data JSON menggunakan Axios atau metode lainnya
+        axios
+          .get("assets/js/data.json")
+          .then((response) => {
+            this.books = response.data;
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      },
+
+      methods: {
+        formatCurrency(harga) {
+          try {
+            const formattedharga = new Intl.NumberFormat("id-ID", {
+              style: "currency",
+              currency: "IDR",
+            }).format(harga);
+            return formattedharga;
+          } catch (error) {
+            console.error(error);
+            return "Error";
+          }
         },
-        mounted() {
-          // Mengambil data JSON menggunakan Axios atau metode lainnya
-          axios
-            .get("assets/js/data.json")
-            .then((response) => {
-              this.books = response.data;
-            })
-            .catch((error) => {
-              console.error(error);
-            });
+        addToCart(book) {
+          const existingItem = this.cartItems.find(
+            (item) => item.id === book.id
+          );
+          if (existingItem) {
+            existingItem.quantity += 1;
+          } else {
+            const cartItem = {
+              id: book.id,
+              gambar: book.gambar,
+              judul: book.judul,
+              harga: book.harga,
+              diskon: book.diskon,
+              quantity: 1,
+            };
+            this.cartItems.push(cartItem);
+          }
+          this.saveCartToCookie();
+
+          alert("Buku telah ditambahkan ke keranjang :)");
+        },
+        getProductImage(item) {
+          // Assuming you have a `gambar` property in the `item` object that stores the image path
+          // If the image is stored locally in the assets/img/product/ folder, you can use the following logic
+          return `${item.gambar}`;
+        },
+        removeFromCart(itemId) {
+          this.cartItems = this.cartItems.filter(
+            (item) => item.id !== itemId
+          );
+          this.saveCartToCookie();
         },
 
-        methods: {
-          formatCurrency(harga) {
+        setCookie(name, value, days) {
+          const expires = new Date();
+          expires.setDate(expires.getDate() + days);
+          const cookieValue =
+            encodeURIComponent(value) +
+            (days === null ? "" : `; expires=${expires.toUTCString()}`);
+          document.cookie = `${name}=${cookieValue}; path=/`;
+        },
+        getCookie(name) {
+          const nameEQ = name + "=";
+          const cookies = document.cookie.split(";");
+
+          for (let i = 0; i < cookies.length; i++) {
+            let cookie = cookies[i];
+            while (cookie.charAt(0) === " ") {
+              cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf(nameEQ) === 0) {
+              return cookie.substring(nameEQ.length, cookie.length);
+            }
+          }
+          return null;
+        },
+        saveCartToCookie() {
+          const cartData = JSON.stringify(this.cartItems);
+          this.setCookie("cart", cartData, 7);
+        },
+        getCartItems() {
+          const cartData = this.getCookie("cart");
+          if (cartData) {
             try {
-              const formattedharga = new Intl.NumberFormat("id-ID", {
-                style: "currency",
-                currency: "IDR",
-              }).format(harga);
-              return formattedharga;
+              return JSON.parse(decodeURIComponent(cartData));
             } catch (error) {
-              console.error(error);
-              return "Error";
+              console.error("Error parsing cart data:", error);
+              return [];
             }
-          },
-          addToCart(book) {
-            const existingItem = this.cartItems.find(
-              (item) => item.id === book.id
-            );
-            if (existingItem) {
-              existingItem.quantity += 1;
-            } else {
-              const cartItem = {
-                id: book.id,
-                gambar: book.gambar,
-                judul: book.judul,
-                harga: book.harga,
-                diskon: book.diskon,
-                quantity: 1,
-              };
-              this.cartItems.push(cartItem);
+          }
+          return [];
+        },
+        openPopup() {
+          this.showPopup = true;
+          this.cartItems = this.getCartItems();
+        },
+        closePopup() {
+          this.showPopup = false;
+        },
+
+        // Flipping Book
+        openDetails(id) {
+          document.getElementById(id).style.display = "flex";
+        },
+        closeDetails(id) {
+          // close popup
+          document.getElementById(id).style.display = "none";
+        },
+        // Flipping Book
+
+        // plus minus
+        increment(book) {
+          book.quantity++;
+        },
+        decrement(book) {
+          if (book.quantity > 0) {
+            book.quantity--;
+          }
+        },
+        // end plus minus
+
+        calculateTotal(book) {
+          let total = 0;
+          for (const item of this.cartItems) {
+            if (item.judul === book.judul) {
+              total += (item.harga - item.diskon) * item.quantity;
             }
-            this.saveCartToCookie();
+          }
+          return total;
+        },
+        calculateOverallTotal() {
+          let overallTotal = 0;
 
-            alert("Buku telah ditambahkan ke keranjang :)");
-          },
-          getProductImage(item) {
-            // Assuming you have a `gambar` property in the `item` object that stores the image path
-            // If the image is stored locally in the assets/img/product/ folder, you can use the following logic
-            return `${item.gambar}`;
-          },
-          removeFromCart(itemId) {
-            this.cartItems = this.cartItems.filter(
-              (item) => item.id !== itemId
-            );
-            this.saveCartToCookie();
-          },
+          for (const book of this.groupedBooks) {
+            overallTotal += this.calculateTotal(book);
+          }
 
-          setCookie(name, value, days) {
-            const expires = new Date();
-            expires.setDate(expires.getDate() + days);
-            const cookieValue =
-              encodeURIComponent(value) +
-              (days === null ? "" : `; expires=${expires.toUTCString()}`);
-            document.cookie = `${name}=${cookieValue}; path=/`;
-          },
-          getCookie(name) {
-            const nameEQ = name + "=";
-            const cookies = document.cookie.split(";");
+          return overallTotal;
+        },
+        submitCheckout(event) {
+          event.preventDefault();
 
-            for (let i = 0; i < cookies.length; i++) {
-              let cookie = cookies[i];
-              while (cookie.charAt(0) === " ") {
-                cookie = cookie.substring(1);
-              }
-              if (cookie.indexOf(nameEQ) === 0) {
-                return cookie.substring(nameEQ.length, cookie.length);
-              }
-            }
-            return null;
-          },
-          saveCartToCookie() {
-            const cartData = JSON.stringify(this.cartItems);
-            this.setCookie("cart", cartData, 7);
-          },
-          getCartItems() {
-            const cartData = this.getCookie("cart");
-            if (cartData) {
-              try {
-                return JSON.parse(decodeURIComponent(cartData));
-              } catch (error) {
-                console.error("Error parsing cart data:", error);
-                return [];
-              }
-            }
-            return [];
-          },
-          openPopup() {
-            this.showPopup = true;
-            this.cartItems = this.getCartItems();
-          },
-          closePopup() {
-            this.showPopup = false;
-          },
-
-          // Flipping Book
-          openDetails(id) {
-            document.getElementById(id).style.display = "flex";
-          },
-          closeDetails(id) {
-            // close popup
-            document.getElementById(id).style.display = "none";
-          },
-          // Flipping Book
-
-          // plus minus
-          increment(book) {
-            book.quantity++;
-          },
-          decrement(book) {
-            if (book.quantity > 0) {
-              book.quantity--;
-            }
-          },
-          // end plus minus
-
-          calculateTotal(book) {
-            let total = 0;
-            for (const item of this.cartItems) {
-              if (item.judul === book.judul) {
-                total += (item.harga - item.diskon) * item.quantity;
-              }
-            }
-            return total;
-          },
-          calculateOverallTotal() {
-            let overallTotal = 0;
-
-            for (const book of this.groupedBooks) {
-              overallTotal += this.calculateTotal(book);
-            }
-
-            return overallTotal;
-          },
-          submitCheckout(event) {
-            event.preventDefault();
-
-            const message = `Dialogika Shop - Checkout
+          const message = `Dialogika Shop - Checkout
 
       Nama: ${this.nama}
       E-Mail: ${this.email}
@@ -837,99 +690,100 @@
 
       Detail Pembelian:
       ${this.cartItems
-        .map(
-          (item) =>
-            `${item.judul} x ${item.quantity} =  ~${this.formatCurrency(
-              item.harga * item.quantity
-            )}~ ${this.formatCurrency(
-              (item.harga - item.diskon) * item.quantity
-            )}`
-        )
-        .join("\n")}
+              .map(
+                (item) =>
+                  `${item.judul} x ${item.quantity} =  ~${this.formatCurrency(
+                    item.harga * item.quantity
+                  )}~ ${this.formatCurrency(
+                    (item.harga - item.diskon) * item.quantity
+                  )}`
+              )
+              .join("\n")}
 
       Total: ${this.formatCurrency(this.calculateOverallTotal())}
 
       Mohon dibantu untuk melakukan pembayaran.`;
 
-            const formData = new FormData();
-            formData.append("message", message);
+          const formData = new FormData();
+          formData.append("message", message);
 
-            const whatsappLink = `https://wa.me/6285162992597?text=${encodeURIComponent(
-              message
-            )}`;
-            window.open(whatsappLink, "_blank");
+          const whatsappLink = `https://wa.me/6285162992597?text=${encodeURIComponent(
+            message
+          )}`;
+          window.open(whatsappLink, "_blank");
+        },
+      },
+      computed: {
+        bookQuantity: {
+          get() {
+            return this.book.quantity;
+          },
+          set(value) {
+            this.book.quantity = Number(value);
           },
         },
-        computed: {
-          bookQuantity: {
-            get() {
-              return this.book.quantity;
-            },
-            set(value) {
-              this.book.quantity = Number(value);
-            },
-          },
-          groupedBooks() {
-            const groupedBooks = {};
+        groupedBooks() {
+          const groupedBooks = {};
 
-            for (const item of this.cartItems) {
-              if (!groupedBooks[item.judul]) {
-                groupedBooks[item.judul] = item;
-              } else {
-                groupedBooks[item.judul].quantity += item.quantity;
-              }
+          for (const item of this.cartItems) {
+            if (!groupedBooks[item.judul]) {
+              groupedBooks[item.judul] = item;
+            } else {
+              groupedBooks[item.judul].quantity += item.quantity;
             }
+          }
 
-            return Object.values(groupedBooks);
-          },
+          return Object.values(groupedBooks);
         },
-      }).mount("#app");
-    </script>
-    <script></script>
+      },
+    }).mount("#app");
+  </script>
+  <script></script>
 
-    <!-- Footer -->
-    <main-footer></main-footer>
-    <!-- End Footer -->
+  <!-- Footer -->
+  <main-footer></main-footer>
+  <!-- End Footer -->
 
-    <!-- js here -->
-    <script src="assets/js/jquery-2.1.4.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jarallax.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/jquery.meanmenu.js"></script>
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery-ui.js"></script>
-    <script src="assets/js/gmap3.min.js"></script>
-    <script src="assets/js/switch.js"></script>
-    <script src="http://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
+  <!-- js here -->
+  <script src="assets/js/jquery-2.1.4.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/jarallax.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/jquery.meanmenu.js"></script>
+  <script src="assets/js/scrollreveal.min.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/jquery-ui.js"></script>
+  <script src="assets/js/gmap3.min.js"></script>
+  <script src="assets/js/switch.js"></script>
+  <script src="http://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
 
-    <!-- js here -->
-    <script src="assets/js/shop.js"></script>
-    <script src="assets/js/script.js"></script>
+  <!-- js here -->
+  <script src="assets/js/shop.js"></script>
+  <script src="assets/js/script.js"></script>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <!-- ICONS -->
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <!-- ICONS -->
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/component/headerfooter.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/index.min.js"></script>
-    <script src="assets/js/cart.js"></script>
-    <script>
-      $(".mobile-nav-toggle").on("click", function (e) {
-        $("#sidebar-mobile").offcanvas("show");
-      });
-    </script>
-  </body>
+  <!-- Template Main JS File -->
+  <script src="assets/js/component/headerfooter.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/index.min.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script>
+    $(".mobile-nav-toggle").on("click", function (e) {
+      $("#sidebar-mobile").offcanvas("show");
+    });
+  </script>
+</body>
+
 </html>
