@@ -491,4 +491,173 @@
   </script>
 </body>
 
+
+
+
+
+  <!-- PRODUCT AREA START -->
+  <div class="ltn__product-area ltn__product-gutter  pt-65 pb-40">
+    <div id="app" class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title-area text-center">
+            <h1 class="section-title section-title-border">Katalog Buku</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center" >
+        <!-- ltn__product-item -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6" v-for="book in books" :key="book.id">
+          <div class="ltn__product-item text-center">
+            <div class="product-img">
+              <a href=""><img :src="book.gambar" alt=""></a>
+              <div class="product-badge">
+                <ul>
+                  <li class="badge-1">Hot</li>
+                </ul>
+              </div>
+              <div class="product-hover-action product-hover-action-2">
+                <ul>
+                  <li>
+                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                      <i class="icon-magnifier"></i>
+                    </a>
+                  </li>
+                  <li class="add-to-cart">
+                    <a href="#" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
+                      <span class="cart-text d-none d-xl-block" @click="addToCart(book)">Add to Cart</span>
+                      <span class="d-block d-xl-none"><i class="icon-handbag"></i></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                      <i class="icon-shuffle"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-info">
+              <h2 class="product-title"><a href="product-details.html">{{ book.judul }}</a></h2>
+              <div class="product-price">
+                <span>$18.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- PRODUCT SLIDER AREA END -->
+
+  <div class="col-md-9">
+    <div class="shop-product-item">
+      <div class="product-showcase">
+        <div class="genius-shop-item">
+          <div class="tab-container">
+            <div id="tab1" class="tab-content-1 best-product-section">
+              <h2 class="widget-title text-capitalize">
+                Katalog Buku
+              </h2>
+              <div class="row">
+                <div class="col-md-4" v-for="book in books" :key="book.id">
+                  <div class="flipbook" :id="book.popup">
+                    <!-- Modal -->
+                    <div class="book-detail-popup">
+                      <div class="modal-content">
+                        <button @click="closeDetails(book.popup)" class="close-btn-flip">
+                          <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+
+                        <div class="modal-body">
+                          <div class="container-fluid custom-area">
+                            <div class="row">
+                              <div class="col-md-6 col-custom">
+                                <div class="modal-product-img">
+                                  <a class="w-100" href="#">
+                                    <img :src="book.gambar" alt="" />
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-custom">
+                                <div class="modal-product">
+                                  <div class="product-content">
+                                    <div class="product-title">
+                                      <h4 class="title">
+                                        {{ book.judul }}
+                                      </h4>
+                                    </div>
+                                    <div class="price-box">
+                                      <span class="regular-price">{{
+                                        formatCurrency(book.harga -
+                                        book.diskon) }}</span>
+                                      &nbsp;
+                                      <span class="old-price" style="color: red"><del>{{
+                                          formatCurrency(book.diskon)
+                                          }}</del></span>
+                                    </div>
+                                    <br />
+                                    <p class="desc-content">
+                                      {{ book.deskripsi }}
+                                    </p>
+                                    <div class="quantity-with-btn">
+                                      <div class="add-to_btn">
+                                        <a class="btn product-cart button-icon flosun-button dark-btn"
+                                          @click="addToCart(book)">Add to cart</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end modal -->
+                  <main class="main bd-grid">
+                    <article class="card" style="border: none">
+                      <div class="card__img">
+                        <img :src="book.gambar" alt="" />
+                      </div>
+                      <div class="card__name" @click="openDetails(book.popup)" style="cursor: pointer">
+                        <p>CLICK HERE FOR DETAIL</p>
+                      </div>
+
+                      <h5 class="card__tittle">{{ book.judul }}</h5>
+                      <div class="card__precis">
+                        <div>
+                          <span class="card__preci card__preci--before"><strike>{{ formatCurrency(
+                              book.diskon)
+                              }}</strike></span>
+                          <span class="card__preci card__preci--now">{{ formatCurrency(book.harga -
+                            book.diskon) }}</span>
+                        </div>
+                        <a class="card__icon" @click="addToCart(book)"><ion-icon
+                            name="cart-outline"></ion-icon></a>
+                      </div>
+                    </article>
+                  </main>
+                </div>
+              </div>
+            </div>
+            <!-- tab-1 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="side-bar-widget first-widget">
+      <h2 class="widget-title text-capitalize">Keranjang buku</h2>
+      <div class="post-categori ul-li-block">
+        <button href="#ltn__utilize-cart-menu" class="tp-btn ltn__utilize-toggle">
+          Lihat Keranjang
+        </button>
+      </div>
+    </div>
+    <div>
+      <!-- Tombol Lihat Keranjang -->
+
 </html>

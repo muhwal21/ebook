@@ -269,169 +269,121 @@
       <div class="product-item">
         <div id="app">
           <div class="row">
-            <div class="col-md-9">
-              <div class="shop-product-item">
-                <div class="product-showcase">
-                  <div class="genius-shop-item">
-                    <div class="tab-container">
-                      <div id="tab1" class="tab-content-1 best-product-section">
-                        <h2 class="widget-title text-capitalize">
-                          Katalog Buku
-                        </h2>
-                        <div class="row">
-                          <div class="col-md-4" v-for="book in books" :key="book.id">
-                            <div class="flipbook" :id="book.popup">
-                              <!-- Modal -->
-                              <div class="book-detail-popup">
-                                <div class="modal-content">
-                                  <button @click="closeDetails(book.popup)" class="close-btn-flip">
-                                    <i class="fa fa-times" aria-hidden="true"></i>
-                                  </button>
-
-                                  <div class="modal-body">
-                                    <div class="container-fluid custom-area">
-                                      <div class="row">
-                                        <div class="col-md-6 col-custom">
-                                          <div class="modal-product-img">
-                                            <a class="w-100" href="#">
-                                              <img :src="book.gambar" alt="" />
-                                            </a>
-                                          </div>
-                                        </div>
-                                        <div class="col-md-6 col-custom">
-                                          <div class="modal-product">
-                                            <div class="product-content">
-                                              <div class="product-title">
-                                                <h4 class="title">
-                                                  {{ book.judul }}
-                                                </h4>
-                                              </div>
-                                              <div class="price-box">
-                                                <span class="regular-price">{{
-                                                  formatCurrency(book.harga -
-                                                  book.diskon) }}</span>
-                                                &nbsp;
-                                                <span class="old-price" style="color: red"><del>{{
-                                                    formatCurrency(book.diskon)
-                                                    }}</del></span>
-                                              </div>
-                                              <br />
-                                              <p class="desc-content">
-                                                {{ book.deskripsi }}
-                                              </p>
-                                              <div class="quantity-with-btn">
-                                                <div class="add-to_btn">
-                                                  <a class="btn product-cart button-icon flosun-button dark-btn"
-                                                    @click="addToCart(book)">Add to cart</a>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- end modal -->
-                            <main class="main bd-grid">
-                              <article class="card" style="border: none">
-                                <div class="card__img">
-                                  <img :src="book.gambar" alt="" />
-                                </div>
-                                <div class="card__name" @click="openDetails(book.popup)" style="cursor: pointer">
-                                  <p>CLICK HERE FOR DETAIL</p>
-                                </div>
-
-                                <h5 class="card__tittle">{{ book.judul }}</h5>
-                                <div class="card__precis">
-                                  <div>
-                                    <span class="card__preci card__preci--before"><strike>{{ formatCurrency(
-                                        book.diskon)
-                                        }}</strike></span>
-                                    <span class="card__preci card__preci--now">{{ formatCurrency(book.harga -
-                                      book.diskon) }}</span>
-                                  </div>
-                                  <a class="card__icon" @click="addToCart(book)"><ion-icon
-                                      name="cart-outline"></ion-icon></a>
-                                </div>
-                              </article>
-                            </main>
-                          </div>
+            <!-- PRODUCT AREA START -->
+            <div class="ltn__product-area ltn__product-gutter  pt-65 pb-40">
+              <div id="app" class="container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="section-title-area text-center">
+                      <h1 class="section-title section-title-border">Katalog Buku</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <!-- ltn__product-item -->
+                  <div class="col-lg-3 col-md-4 col-sm-6 col-6" v-for="book in books" :key="book.id">
+                    <div class="ltn__product-item text-center" :id="book.popup">
+                      <div class="product-img">
+                        <a @click="openDetails(book.popup)"><img :src="book.gambar" alt=""></a>
+                        <div class="product-badge">
+                          <ul>
+                            <li class="badge-1">Hot</li>
+                          </ul>
+                        </div>
+                        <div class="product-hover-action product-hover-action-2">
+                          <ul>
+                            <li>
+                              <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                <i class="icon-magnifier"></i>
+                              </a>
+                            </li>
+                            <li class="add-to-cart">
+                              <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                data-bs-target="#add_to_cart_modal">
+                                <span class="cart-text d-none d-xl-block" @click="addToCart(book)">Add to Cart</span>
+                                <span class="d-block d-xl-none"><i class="icon-handbag"></i></span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                <i class="icon-shuffle"></i>
+                              </a>
+                            </li>
+                          </ul>
                         </div>
                       </div>
-                      <!-- tab-1 -->
+                      <div class="product-info">
+                        <h2 class="product-title"><a href="">{{ book.judul }}</a></h2>
+                        <div class="product-price">
+                          <span>{{
+                            formatCurrency(book.harga -
+                            book.diskon) }}</span>
+                          <del>{{
+                            formatCurrency(book.diskon)
+                            }}</del>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="side-bar-widget first-widget">
-                <h2 class="widget-title text-capitalize">Keranjang buku</h2>
-                <div class="post-categori ul-li-block">
-                  <button href="#ltn__utilize-cart-menu" class="tp-btn ltn__utilize-toggle">
-                    Lihat Keranjang
+            <!-- PRODUCT SLIDER AREA END -->
+
+
+            <!-- Utilize Cart Menu Start -->
+            <div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+              <div class="ltn__utilize-menu-inner ltn__scrollbar">
+                <div class="ltn__utilize-menu-head">
+                  <span class="ltn__utilize-menu-title">Cart</span>
+                  <button class="ltn__utilize-close">
+                    <i class="fa fa-times" aria-hidden="true" style="color: black; font-size: 20px"></i>
                   </button>
                 </div>
-              </div>
-              <div>
-                <!-- Tombol Lihat Keranjang -->
-
-                <!-- Utilize Cart Menu Start -->
-                <div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
-                  <div class="ltn__utilize-menu-inner ltn__scrollbar">
-                    <div class="ltn__utilize-menu-head">
-                      <span class="ltn__utilize-menu-title">Cart</span>
-                      <button class="ltn__utilize-close">
-                        <i class="fa fa-times" aria-hidden="true" style="color: black; font-size: 20px"></i>
+                <div class="mini-cart-product-area ltn__scrollbar">
+                  <div v-for="item in cartItems" :key="item.id" class="mini-cart-item clearfix">
+                    <div class="mini-cart-img">
+                      <a><img :src="getProductImage(item)" alt="Product Image" /></a>
+                      <span @click="removeFromCart(item.id)" id="remove" class="mini-cart-item-delete"><i
+                          class="fa-light fa-trash"></i></span>
+                    </div>
+                    <div class="mini-cart-info">
+                      <h6><a>{{ item.judul }}</a></h6>
+                      <span class="mini-cart-quantity">x{{ item.quantity }} = {{
+                        formatCurrency((item.harga - item.diskon) *
+                        item.quantity) }}</span>
+                    </div>
+                    <div class="valuenum">
+                      <button @click="decrement(item)">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
                       </button>
-                    </div>
-                    <div class="mini-cart-product-area ltn__scrollbar">
-                      <div v-for="item in cartItems" :key="item.id" class="mini-cart-item clearfix">
-                        <div class="mini-cart-img">
-                          <a><img :src="getProductImage(item)" alt="Product Image" /></a>
-                          <span @click="removeFromCart(item.id)" id="remove" class="mini-cart-item-delete"><i
-                              class="fa-light fa-trash"></i></span>
-                        </div>
-                        <div class="mini-cart-info">
-                          <h6><a>{{ item.judul }}</a></h6>
-                          <span class="mini-cart-quantity">x{{ item.quantity }} = {{
-                            formatCurrency((item.harga - item.diskon) *
-                            item.quantity) }}</span>
-                        </div>
-                        <div class="valuenum">
-                          <button @click="decrement(item)">
-                            <i class="fa fa-minus" aria-hidden="true"></i>
-                          </button>
-                          <input class="qt" type="number" id="inputNumber" v-model.number="item.quantity" />
-                          <button @click="increment(item)">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mini-cart-footer">
-                      <div class="mini-cart-sub-total">
-                        <h5>
-                          Subtotal:
-                          <span>{{ formatCurrency(calculateOverallTotal())
-                            }}</span>
-                        </h5>
-                      </div>
-                      <div class="btn-wrapper">
-                        <!-- <a href="#" class="theme-btn-1 btns btn-effect-1">Close</a> -->
-                        <a onclick="checkout()" class="theme-btn-2 btns btn-effect-2">Checkout</a>
-                      </div>
+                      <input class="qt" type="number" id="inputNumber" v-model.number="item.quantity" />
+                      <button @click="increment(item)">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                   </div>
                 </div>
-                <!-- Utilize Cart Menu End -->
-                <div class="ltn__utilize-overlay"></div>
+                <div class="mini-cart-footer">
+                  <div class="mini-cart-sub-total">
+                    <h5>
+                      Subtotal:
+                      <span>{{ formatCurrency(calculateOverallTotal())
+                        }}</span>
+                    </h5>
+                  </div>
+                  <div class="btn-wrapper">
+                    <!-- <a href="#" class="theme-btn-1 btns btn-effect-1">Close</a> -->
+                    <a onclick="checkout()" class="theme-btn-2 btns btn-effect-2">Checkout</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Utilize Cart Menu End -->
+            <div class="ltn__utilize-overlay"></div>
 
-                <!-- Popup Keranjang -->
-                <!-- <div v-if="showPopup" class="popup">
+            <!-- Popup Keranjang -->
+            <!-- <div v-if="showPopup" class="popup">
                     <div class="popup-content">
                       <h3>Keranjang</h3>
                       <button @click="closePopup" class="close-btn">
@@ -444,9 +396,9 @@
                             alt="Product Image"
                             style="width: 50px"
                           /> -->
-                <!--  tambahkan script ini jika ingin mengambil gambar lokal assets/img/product/' + -->
+            <!--  tambahkan script ini jika ingin mengambil gambar lokal assets/img/product/' + -->
 
-                <!-- {{ item.judul }} <br /><small>X </small>
+            <!-- {{ item.judul }} <br /><small>X </small>
                           {{ item.quantity }} = {{ formatCurrency(item.harga *
                           item.quantity) }}
                           <button @click="removeFromCart(item.id)" id="remove">
@@ -471,51 +423,51 @@
                       </div>
                     </div>
                   </div> -->
-                <div class="checkout-form" id="checkout">
-                  <form id="checkoutForm" @submit="submitCheckout">
-                    <h3>Form Checkout</h3>
-                    <div onclick="hidePopup()" id="checkoutclose" class="close-btn">
-                      <i class="fa fa-times" aria-hidden="true"></i>
-                    </div>
-                    <br />
-                    <label for="nama">Nama:</label>
-                    <input type="text" id="nama" v-model="nama" required /><br />
-                    <label for="email">E-Mail:</label>
-                    <input type="text" id="email" v-model="email" required /><br />
-                    <label for="nomorHp">Nomor HP:</label>
-                    <input type="text" id="nomorHp" v-model="nomorHp" required /><br />
-
-                    <label for="alamat">Alamat:</label>
-                    <textarea id="alamat" v-model="alamat" required></textarea><br />
-
-                    <h5>Detail Pembelian</h5>
-                    <ul>
-                      <li v-for="item in cartItems" :key="item.id">
-                        {{ item.judul }} x {{ item.quantity }}
-                        <br />
-                        =
-                        <small><strike>{{ formatCurrency((item.harga) * item.quantity)
-                            }}</strike></small>
-                        {{ formatCurrency((item.harga - item.diskon) *
-                        item.quantity) }}
-                      </li>
-                    </ul>
-                    <div class="footer-form">
-                      <h5>
-                        Total: {{ formatCurrency(calculateOverallTotal()) }}
-                      </h5>
-
-                      <button type="submit" id="checkoutsubmit" class="tp-btn">
-                        Checkout
-                      </button>
-                    </div>
-                  </form>
+            <div class="checkout-form" id="checkout">
+              <form id="checkoutForm" @submit="submitCheckout">
+                <h3>Form Checkout</h3>
+                <div onclick="hidePopup()" id="checkoutclose" class="close-btn">
+                  <i class="fa fa-times" aria-hidden="true"></i>
                 </div>
-              </div>
+                <br />
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" v-model="nama" required /><br />
+                <label for="email">E-Mail:</label>
+                <input type="text" id="email" v-model="email" required /><br />
+                <label for="nomorHp">Nomor HP:</label>
+                <input type="text" id="nomorHp" v-model="nomorHp" required /><br />
+
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" v-model="alamat" required></textarea><br />
+
+                <h5>Detail Pembelian</h5>
+                <ul>
+                  <li v-for="item in cartItems" :key="item.id">
+                    {{ item.judul }} x {{ item.quantity }}
+                    <br />
+                    =
+                    <small><strike>{{ formatCurrency((item.harga) * item.quantity)
+                        }}</strike></small>
+                    {{ formatCurrency((item.harga - item.diskon) *
+                    item.quantity) }}
+                  </li>
+                </ul>
+                <div class="footer-form">
+                  <h5>
+                    Total: {{ formatCurrency(calculateOverallTotal()) }}
+                  </h5>
+
+                  <button type="submit" id="checkoutsubmit" class="tp-btn">
+                    Checkout
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   </section>
 
