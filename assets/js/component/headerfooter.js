@@ -26,155 +26,64 @@ class Header extends HTMLElement {
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-      <a href="https://dialogika.co/" class="logo me-auto"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>
+
+      <a href="../index.html" class="logo me-auto"><img src="../assets/img/logo.webp" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul id="navbar-navlist">
-          <li><a class="nav-link scrollto active" data-scroll href="#hero">Home</a></li>
-          <li class="nav-categories"><a href="../program/index.html"><span>Program</span><i
-                class='bx bx-chevron-down-circle'></i></a>
+        <ul class="navbar-desktop-list">
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Program</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li>
-                <span class="badge rounded-blue">Online</span>&nbsp;
-                <span class="badge rounded-blue">Subscribe</span>&nbsp;
-              </li>
-              <li>
-                <span class="badge rounded-blue">Online</span>&nbsp;
-                <span class="badge rounded-blue">Package</span>
-              </li>
-              <li>
-                <span class="badge rounded-red">Private</span>&nbsp;
-                <span class="badge rounded-blue">Package</span>&nbsp;
-              </li>
-              <li>
-                <span class="badge rounded-blue">Online</span>&nbsp;
-                <span class="badge rounded-orange">Advance</span>&nbsp;
-              </li>
-              <li>
-                <a href="../corporate/">
-                  <span class="badge rounded-green">Corporate</span>&nbsp;
-                  <span class="badge rounded-blue">Training</span>&nbsp;
-                </a>
-              </li>
-              <li><a href="../subscribe/action-play.html"><i class='bx bxs-chevron-right'></i>&nbsp;Action Play</a></li>
-              <li>
-                <a href="../program/kids-class.html"><i class='bx bxs-chevron-right'></i>&nbsp;Kids Class</a>
-                <span class="badge rounded-blue-turtle">Kids</span>
-              </li>
-              <li>
-                <a href="../private/basic-private.html"><i class='bx bxs-chevron-right'></i>&nbsp;Basic Private</a>
-                <span class="badge rounded-blue">Online</span>
-              </li>
-              <li><a href="../program/presentation-class.html"><i class='bx bxs-chevron-right'></i>&nbsp;Presentation
-                  Class</a>
-              </li>
-              <li><a href="../corporate/basic-training.html"><i class='bx bxs-chevron-right'></i>&nbsp;Basic Training</a>
-              </li>
-              <li>
-                <a href="../subscribe/kids-play.html"><i class='bx bxs-chevron-right'></i>&nbsp;Kids Play</a>
-                <span class="badge rounded-blue-turtle">Kids</span>
-              </li>
-              <li>
-                <a href="../program/basic-plus.html"><i class='bx bxs-chevron-right'></i>&nbsp;Basic Plus</a>
-              </li>
-              <li>
-                <a href="../private/first-private.html"><i class='bx bxs-chevron-right'></i>&nbsp;First Private</a>
-                <span class="badge rounded-green">Jogja</span>
-              </li>
-              <li>
-                <a href="../program/voice-over.html"><i class='bx bxs-chevron-right'></i>&nbsp;Voice Over</a>
-              </li>
-              <li>
-                <a href="../corporate/advance-training.html"><i class='bx bxs-chevron-right'></i>&nbsp;Advance Training</a>
-              </li>
-              <li>
-                <span class="badge rounded-green">Offline</span>&nbsp;
-                <span class="badge rounded-blue">Subscribe</span>&nbsp;
-              </li>
-              <li>
-                <span class="badge rounded-green">Offline</span>&nbsp;
-                <span class="badge rounded-blue">Package</span>&nbsp;
-              </li>
-              <li>
-                <a href="../private/kids-private.html"><i class='bx bxs-chevron-right'></i>&nbsp;Kids Private</a>
-                <span class="badge rounded-blue-turtle">Kids</span>&nbsp;
-                <span class="badge rounded-blue">Online</span>&nbsp;
-              </li>
-              <li>
-                <span class="badge rounded-green">Offline</span>&nbsp;
-                <span class="badge rounded-blue">Subscribe</span>&nbsp;
-              </li>
-              <li>
-                <a href="../corporate/certified-training.html"><i class='bx bxs-chevron-right'></i>&nbsp;Certified
-                  Training</a>
-                <span class="badge rounded-grey">Coming Soon</span>
-              </li>
-              <li>
-                <a href="../subscribe/jogja-play.html"><i class='bx bxs-chevron-right'></i>&nbsp;Jogja Play</a>
-              </li>
-              <li>
-                <a href="../program/first-class.html"><i class='bx bxs-chevron-right'></i>&nbsp;First Class</a>
-                <span class="badge rounded-green">Jogja</span>
-              </li>
-              <li>
-                &nbsp;
-              </li>
-              <li>
-                <a href="../program/emcee-class.html"><i class='bx bxs-chevron-right'></i>&nbsp;Master of Ceremony</a>
-              </li>
-              <li></li>
-              <li>&nbsp;</li>
-              <li>
-                <a href="../program/royal-class-jakarta.html"><i class='bx bxs-chevron-right'></i>&nbsp;Royal
-                  Class</a><span class="badge rounded-green">Jakarta</span>
-              </li>
-              <li>&nbsp;</li>
-              <li></li>
-              <li></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="../service/"><span>Service</span><i class='bx bx-chevron-down-circle'></i></a>
-            <ul>
-              <li class="dropdown">
-                <a href="../service/counseling/"><span>Counseling</span></a>
-                
-              </li>
-              
-              <li class="dropdown">
-                <a href="../service/agency/"><span>Agency</span> <i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="#"><span>Online</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="../service/agency/emcee.html"><span>Master of Ceremony</span></a></li>
-                  <li><a href="../service/agency/host.html"><span>Host</span></a></li>
-                  <li><a href="../service/agency/voice-over.html"><span>Voice Over</span></a></li>
-                  <li class="dropdown-divider"></li>
-                  <li><a href="../service/agency/request.html"><span>Request</span></a></li>
+                  <li><a href="../program/basic-play.html">Basic Play <span class="badge rounded-pill text-bg-success">Best Buy</span></a></li>
+                  <li><a href="../program/basic-plus.html">Basic Plus</a></li>
+                  <li><a href="../program/basic-private.html">Basic Private</a></li>
+                  <li><a href="../program/kids-play.html">Kids Play</a></li>
+                  <li><a href="../program/kids-plus.html">Kids Plus<span class="badge rounded-pill text-bg-success">Best Buy</span></a></li>
+                  <li><a href="../program/kids-private.html">Kids Private</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Offline</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../program/first-class.html">First Class <span class="badge rounded-pill text-bg-success">Best Buy</span></a></li>
+                  <li><a href="../program/first-kids.html">First Kids</a></li>
+                  <li><a href="../program/first-private.html">First Private</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Area</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../program/index-jogja.html">Yogyakarta</a></li>
+                  <li><a href="../program/index-tangsel.html">Bintaro</a></li>
+                  <li><a href="../program/index-surabaya.html" onclick="return false;">
+                    <span>Surabaya</span>
+                    <span class="badge rounded-pill text-bg-secondary">Coming Soon</span></a>
+                  </li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li class="dropdown"><a href="../shop/"><span>Shop</span><i class='bx bx-chevron-down-circle'></i></a>
-            <ul>
-              <li><a href="../shop/book.html">Book</a></li>
-              <li><a href="../shop/module.html">Module</a></li>
-              <li class="dropdown-divider"></li>
-              <li><a href="../shop/">Discover</a></li>
-            </ul>
+          <li class="dropdown"><a href="#"><span>Corporate</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="../training/basic-public.html">Basic Public Speaking</a></li>
+                <li><a href="../training/high-impact.html">High Impact Presentation</a></li>
+                <li><a href="../training/daily-briefing.html">Daily Briefing</a></li>
+                <li><a href="../training/sales-pitch.html">Sales Pitch</a></li>
+                <li><a href="../training/handling-complain.html">Handling Complain</a></li>
+                <li><a href="../training/hospitality.html">Hospitality</a></li>
+                <li><a href="../training/host-live.html">Host Live</a></li>
+              </ul>
           </li>
-          <li><a class="nav-link" href="../event/index.html">Event</a></li>
-          <li><a class="nav-link" href="../blog/index.html">Blog</a></li>
+          <li><a class="nav-link scrollto" href="../event/">Event</a></li>
+          <li><a class="nav-link scrollto" href="../service/">Services</a></li>
+          <li><a class="nav-link scrollto" href="../shop/">Shop</a></li>
+          <li><a class="nav-link scrollto" href="../blog/">Blog</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
+        <i class="bi bi-list d-block d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"></i>
+      </nav><!-- .navbar -->
 
-      <div class="post-categori ul-li-block" id="cart-header">
-                    <button
-                      href="#ltn__utilize-cart-menu"
-                      class="tp-btn ltn__utilize-toggle"
-                    >
-                      <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
-                  </div>
+      <a href="#trial-request" data-bs-toggle="modal" class="appointment-btn"><span class="d-none d-md-inline">Request</span> Trial</a>
+
     </div>
   </header><!-- End Header -->
 
