@@ -616,15 +616,15 @@ class Footer extends HTMLElement {
             <br><br>
             <h4 class="d-flex justify-content-between">Payment Method<i class='bx bx-chevron-down d-md-none'></i></h4>
             <p><i class="bx bx-chevron-down"></i> Bank Transfer</p>
-            <img src="../assets/img/bank.png" />
+            <img src="assets/img/bank.png" />
             <br><br>
             <p><i class="bx bx-chevron-down"></i> E-Wallet</p>
-            <img src="../assets/img/wallet.png" />
+            <img src="assets/img/wallet.png" />
 
             <div class="card">
               <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted" style="color:#fff;">Telah Terdaftar Oleh</h6>
-                <img src="../assets/img/ham.png" class="" /><br>
+                <img src="assets/img/ham.png" class="" /><br>
                 <p>
                   <strong>Nomor:</strong> AHU-0118640.AH.01.11.TAHUN 2022<br>
                   <strong>Registrasi: </strong>4022062334106037<br />
