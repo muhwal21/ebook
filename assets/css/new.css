@@ -1048,13 +1048,13 @@ input[type="checkbox"]:checked + label:after {
   opacity: 1;
 }
 
-button,
+/* button,
 .btn {
   cursor: pointer;
   border: 0;
   padding: 0;
   background-color: transparent;
-}
+} */
 
 hr {
   margin: 60px 0;
