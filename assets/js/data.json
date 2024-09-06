@@ -13,8 +13,8 @@
   {
     "id": 2,
     "gambar": "https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg",
-    "judul": "Buku 2",
-    "deskripsi": "Valll Push Test",
+    "judul": "Valll Push Test",
+    "deskripsi": " Desc Valll Push Test",
     "harga": 150000,
     "diskon":5000,
     "kategori": "Non-Fiksi",
