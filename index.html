@@ -578,22 +578,35 @@
                       return;
                   }
 
-                  let message = `Checkout Details:%0AName: ${this.customerName}%0AWhatsApp: ${this.whatsappNumber}%0AEmail: ${this.email}%0A--------------------------------%0A`;
+                  const totalAmount = this.total; // Ambil total harga dari cart
 
-                  this.cartItems.forEach(item => {
-                      message += `- ${item.judul}%0AQuantity: ${item.quantity}%0APrice: Rp${(item.harga * item.quantity).toLocaleString()}%0A--------------------------------%0A`;
+                  // Kirim permintaan ke server backend (Vercel)
+                  fetch('https://severlesss-ebook.vercel.app/api/xenditPayment', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({
+                          amount: totalAmount,
+                          customerName: this.customerName,
+                          email: this.email,
+                          phoneNumber: this.whatsappNumber
+                      })
+                  })
+                  .then(response => response.json())
+                  .then(data => {
+                      if (data.url) {
+                          // Redirect ke halaman pembayaran Xendit
+                          window.location.href = data.url;
+                      } else {
+                          alert('Error: ' + data.error);
+                      }
+                  })
+                  .catch(error => {
+                      console.error('Error during checkout:', error);
+                      alert('There was an error during the checkout process.');
                   });
-
-                  message += `Total Amount: Rp${this.total.toLocaleString()}`;
-
-                  const whatsappUrl = `https://api.whatsapp.com/send?phone=6289654692549&text=${message}`;
-                  window.open(whatsappUrl, '_blank');
-
-                  // Setelah membuka tab WA, reload halaman untuk reset aplikasi
-                  setTimeout(() => {
-                      window.location.reload(); // Refresh halaman setelah beberapa detik
-                  }, 1000); // Timeout 1 detik untuk memastikan WhatsApp dibuka terlebih dahulu
-              }
+              }    
             }
         });
 
