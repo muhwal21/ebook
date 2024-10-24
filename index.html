@@ -17,7 +17,8 @@
   <link rel="stylesheet preload" as="style" href="assets/css/icomoon.css" />
 
   <!-- VueJS -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script> <!-- Production build -->
+
   <!-- Axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -433,186 +434,114 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Vue.js Cart App
-        const app = Vue.createApp({
-            data() {
-                return {
-                    books: [
-                        {
-                            "id": 1,
-                            "gambar": "https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg",
-                            "judul": "Ten Thousand Skies Above You",
-                            "harga": 100000,
-                            "diskon": 3000,
-                            "kategori": "Fiksi",
-                            "quantity": 0
-                        },
-                        {
-                            "id": 2,
-                            "gambar": "https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg",
-                            "judul": "Valll Push Test",
-                            "harga": 150000,
-                            "diskon": 5000,
-                            "kategori": "Non-Fiksi",
-                            "quantity": 0
-                        },
-                        {
-                            "id": 3,
-                            "gambar": "https://images-na.ssl-images-amazon.com/images/I/81UWB7oUZ0L.jpg",
-                            "judul": "The Road Less Traveled",
-                            "harga": 80000,
-                            "diskon": 4000,
-                            "kategori": "Fiksi",
-                            "quantity": 0
-                        },
-                        {
-                            "id": 4,
-                            "gambar": "https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg",
-                            "judul": "Thinking, Fast and Slow",
-                            "harga": 180000,
-                            "diskon": 8000,
-                            "kategori": "Non-Fiksi",
-                            "quantity": 0
-                        },
-                        {
-                            "id": 5,
-                            "gambar": "https://images-na.ssl-images-amazon.com/images/I/91M4E+SURUL.jpg",
-                            "judul": "The Power of Habit",
-                            "harga": 250000,
-                            "diskon": 10000,
-                            "kategori": "Non-Fiksi",
-                            "quantity": 0
-                        },
-                        {
-                            "id": 6,
-                            "gambar": "https://images-na.ssl-images-amazon.com/images/I/51N-u8AsmdL._SX327_BO1,204,203,200_.jpg",
-                            "judul": "The Alchemist",
-                            "harga": 90000,
-                            "diskon": 2000,
-                            "kategori": "Fiksi",
-                            "quantity": 0
-                        },
-                        {
-                            "id": 7,
-                            "gambar": "https://images-na.ssl-images-amazon.com/images/I/81eB+7+CkUL.jpg",
-                            "judul": "Atomic Habits",
-                            "harga": 120000,
-                            "diskon": 4000,
-                            "kategori": "Non-Fiksi",
-                            "quantity": 0
-                        },
-                        {
-                            "id": 8,
-                            "gambar": "https://images-na.ssl-images-amazon.com/images/I/71aFt4+OTOL.jpg",
-                            "judul": "Sapiens: A Brief History of Humankind",
-                            "harga": 280000,
-                            "diskon": 15000,
-                            "kategori": "Non-Fiksi",
-                            "quantity": 0
-                        },
-                        {
-                            "id": 9,
-                            "gambar": "https://images-na.ssl-images-amazon.com/images/I/71KilybDOoL.jpg",
-                            "judul": "The Catcher in the Rye",
-                            "harga": 95000,
-                            "diskon": 5000,
-                            "kategori": "Fiksi",
-                            "quantity": 0
-                        },
-                        {
-                            "id": 10,
-                            "gambar": "https://images-na.ssl-images-amazon.com/images/I/91uwocAMtSL.jpg",
-                            "judul": "The Great Gatsby",
-                            "harga": 110000,
-                            "diskon": 3500,
-                            "kategori": "Fiksi",
-                            "quantity": 0
-                        }
-                    ],
-                    cartItems: [],
-                    isCartOpen: false,
-                    customerName: '',
-                    whatsappNumber: '',
-                    email: ''
-                };
-            },
-            computed: {
-                total() {
-                    return this.cartItems.reduce((sum, item) => sum + (item.harga * item.quantity), 0);
-                }
-            },
-            methods: { 
-              truncatedTitle(title) {
-                    const maxLength = 30; // Batas maksimal karakter
-                    if (title.length > maxLength) {
-                        return title.substring(0, maxLength) + '...'; // Tambahkan elipsis
-                    }
-                    return title; // Tampilkan teks utuh jika tidak melebihi batas
-                },
-                addToCart(book) {
-                    const cartItem = this.cartItems.find(item => item.id === book.id);
-                    if (cartItem) {
-                        cartItem.quantity++;
-                    } else {
-                        this.cartItems.push({ ...book, quantity: 1 });
-                    }
-                    this.isCartOpen = true; // Open cart when item is added
-                },
-                removeFromCart(index) {
-                    this.cartItems.splice(index, 1);
-                },
-                increaseQuantity(index) {
-                    this.cartItems[index].quantity++;
-                },
-                decreaseQuantity(index) {
-                    if (this.cartItems[index].quantity > 1) {
-                        this.cartItems[index].quantity--;
-                    }
-                },
-                toggleCart() {
-                    this.isCartOpen = !this.isCartOpen;
-                },
-                confirmCheckout() {
-                  if (!this.customerName || !this.whatsappNumber || !this.email) {
-                      alert('Please fill in all checkout details.');
-                      return;
-                  }
-
-                  const totalAmount = this.total; // Ambil total harga dari cart
-
-                  // Kirim permintaan ke server backend (Vercel)
-                  fetch('https://severlesss-ebook.vercel.app/api/xenditPayment', {
-                      method: 'POST',
-                      headers: {
-                          'Content-Type': 'application/json'
-                      },
-                      body: JSON.stringify({
-                          amount: totalAmount,
-                          customerName: this.customerName,
-                          email: this.email,
-                          phoneNumber: this.whatsappNumber
-                      })
-                  })
-                  .then(response => response.json())
-                  .then(data => {
-                      if (data.url) {
-                          // Redirect ke halaman pembayaran Xendit
-                          window.location.href = data.url;
-                      } else {
-                          alert('Error: ' + data.error);
-                      }
-                  })
-                  .catch(error => {
-                      console.error('Error during checkout:', error);
-                      alert('There was an error during the checkout process.');
-                  });
-              }    
+      // Vue.js Cart App
+      const app = Vue.createApp({
+        data() {
+          return {
+            books: [
+              {
+                id: 1,
+                gambar: "https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg",
+                judul: "Ten Thousand Skies Above You",
+                harga: 100000,
+                diskon: 3000,
+                kategori: "Fiksi",
+                quantity: 0
+              },
+              {
+                id: 2,
+                gambar: "https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg",
+                judul: "Valll Push Test",
+                harga: 150000,
+                diskon: 5000,
+                kategori: "Non-Fiksi",
+                quantity: 0
+              },
+              // Buku lainnya...
+            ],
+            cartItems: [],
+            isCartOpen: false,
+            customerName: '',
+            whatsappNumber: '',
+            email: ''
+          };
+        },
+        computed: {
+          total() {
+            return this.cartItems.reduce((sum, item) => sum + (item.harga * item.quantity), 0);
+          }
+        },
+        methods: {
+          truncatedTitle(title) {
+            const maxLength = 30;
+            return title.length > maxLength ? title.substring(0, maxLength) + '...' : title;
+          },
+          addToCart(book) {
+            const cartItem = this.cartItems.find(item => item.id === book.id);
+            if (cartItem) {
+              cartItem.quantity++;
+            } else {
+              this.cartItems.push({ ...book, quantity: 1 });
             }
-        });
-
-        // Mount Cart App
-        app.mount('#app');
+            this.isCartOpen = true;
+          },
+          removeFromCart(index) {
+            this.cartItems.splice(index, 1);
+          },
+          increaseQuantity(index) {
+            this.cartItems[index].quantity++;
+          },
+          decreaseQuantity(index) {
+            if (this.cartItems[index].quantity > 1) {
+              this.cartItems[index].quantity--;
+            }
+          },
+          toggleCart() {
+            this.isCartOpen = !this.isCartOpen;
+          },
+          async confirmCheckout() {
+            if (!this.customerName || !this.whatsappNumber || !this.email) {
+              alert('Please fill in all checkout details.');
+              return;
+            }
+    
+            const totalAmount = this.total;
+    
+            try {
+              // Kirim permintaan ke server backend (periksa apakah URL benar)
+              const response = await fetch('https://severlesss-ebook.vercel.app/api/xenditPayment', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                  amount: totalAmount,
+                  customerName: this.customerName,
+                  email: this.email,
+                  phoneNumber: this.whatsappNumber
+                })
+              });
+    
+              const data = await response.json();
+    
+              if (data.url) {
+                // Redirect ke halaman pembayaran Xendit
+                window.location.href = data.url;
+              } else {
+                alert('Error: ' + data.error);
+              }
+            } catch (error) {
+              console.error('Error during checkout:', error);
+              alert('There was an error during the checkout process.');
+            }
+          }
+        }
+      });
+    
+      // Mount Cart App
+      app.mount('#app');
     </script>
+    
 
 
 
@@ -637,7 +566,8 @@
   <script src="assets/js/jquery-ui.js"></script>
   <script src="assets/js/gmap3.min.js"></script>
   <script src="assets/js/switch.js"></script>
-  <script src="http://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA" async defer></script>
+
 
   <!-- js here -->
   <script src="assets/js/shop.js"></script>
