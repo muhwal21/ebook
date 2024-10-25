@@ -517,9 +517,22 @@
                 external_id: `invoice_${Date.now()}`, // ID unik untuk invoice
                 amount: totalAmount,                  // Jumlah total (dalam Rupiah)
                 payer_email: this.email,              // Email pembeli
-                description: 'Pembelian Buku'         // Deskripsi invoice
+                payer_name: this.customerName,        // Nama pembeli
+                description: `Pembelian Buku - Nama: ${this.customerName}, Email: ${this.email}, No. HP: ${this.whatsappNumber}`, // Deskripsi yang lebih lengkap
+                currency: 'IDR',                      // Kode mata uang
+                success_redirect_url: 'https://example.com/success', // URL redirect setelah sukses
+                expires_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(), // 24 jam dari sekarang
+                metadata: {
+                    category: 'Buku',
+                    items: this.cartItems.map(item => ({ id: item.id, quantity: item.quantity }))
+                },
+                // Menambahkan data customer
+                customer: {
+                    given_names: this.customerName,   // Nama depan atau nama lengkap
+                    email: this.email,                // Email pembeli
+                    mobile_number: this.whatsappNumber // Nomor telepon atau WhatsApp
+                }
             };
-
             // Ganti 'YOUR_SECRET_KEY' dengan API key Xendit Anda
             const apiKey = 'xnd_development_PcazCq3j96uOxrRRHcrBVBGX3RnGdGxAaswAenGV4et7SMgDPDgJoz7O2q2CEu'; // Contoh: 'xnd_development_xxxxxxx'
             const authorizationHeader = 'Basic ' + btoa(apiKey + ':');
