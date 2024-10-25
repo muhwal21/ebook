@@ -512,44 +512,24 @@
 
             const totalAmount = this.total;
 
-            // Buat data invoice
-            const invoiceData = {
-                external_id: `invoice_${Date.now()}`, // ID unik untuk invoice
-                amount: totalAmount,                  // Jumlah total (dalam Rupiah)
-                payer_email: this.email,              // Email pembeli
-                payer_name: this.customerName,        // Nama pembeli
-                description: `Pembelian Buku - Nama: ${this.customerName}, Email: ${this.email}, No. HP: ${this.whatsappNumber}`, // Deskripsi yang lebih lengkap
-                currency: 'IDR',                      // Kode mata uang
-                success_redirect_url: 'https://example.com/success', // URL redirect setelah sukses
-                expires_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(), // 24 jam dari sekarang
-                metadata: {
-                    category: 'Buku',
-                    items: this.cartItems.map(item => ({ id: item.id, quantity: item.quantity }))
-                },
-                // Menambahkan data customer
-                customer: {
-                    given_names: this.customerName,   // Nama depan atau nama lengkap
-                    email: this.email,                // Email pembeli
-                    mobile_number: this.whatsappNumber // Nomor telepon atau WhatsApp
-                }
-            };
-            // Ganti 'YOUR_SECRET_KEY' dengan API key Xendit Anda
-            const apiKey = 'xnd_development_PcazCq3j96uOxrRRHcrBVBGX3RnGdGxAaswAenGV4et7SMgDPDgJoz7O2q2CEu'; // Contoh: 'xnd_development_xxxxxxx'
-            const authorizationHeader = 'Basic ' + btoa(apiKey + ':');
-
-            // Panggil endpoint Xendit untuk membuat invoice
-            fetch('https://api.xendit.co/v2/invoices', {
+            // Panggil serverless function di Vercel
+            fetch('https://severlesss-ebook.vercel.app/api/createInvoice', { // Ganti URL ini
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': authorizationHeader
+                    'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(invoiceData)
+                body: JSON.stringify({
+                    customerName: this.customerName,
+                    whatsappNumber: this.whatsappNumber,
+                    email: this.email,
+                    items: this.cartItems,
+                    totalAmount: totalAmount
+                })
             })
             .then(response => response.json())
             .then(data => {
                 if (data.invoice_url) {
-                    // Arahkan pengguna ke URL invoice Xendit
+                    // Redirect ke URL invoice yang diberikan oleh Xendit
                     window.location.href = data.invoice_url;
                 } else {
                     alert('Gagal membuat invoice. Silakan coba lagi.');
@@ -559,19 +539,13 @@
                 console.error('Error:', error);
                 alert('Terjadi kesalahan. Silakan coba lagi.');
             });
-          }      
+          }
         }
       });
 
       // Mount Cart App
       app.mount('#app');
     </script>
-
-
-
-    
-
-
 
   <!-- Footer -->
   <main-footer></main-footer>
@@ -594,7 +568,7 @@
   <script src="assets/js/jquery-ui.js"></script>
   <script src="assets/js/gmap3.min.js"></script>
   <script src="assets/js/switch.js"></script>
-  <script src="http://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
+
 
   <!-- js here -->
   <script src="assets/js/shop.js"></script>
