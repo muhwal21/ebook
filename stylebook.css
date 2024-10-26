@@ -101,9 +101,8 @@ input[type="text"] {
 
 .card-img-top {
     object-fit: contain;
+    width: 400px;
     height: 100%;
-    width: 100%;
-    padding: 15px;
 }
 
 .card-body {
@@ -117,7 +116,7 @@ input[type="text"] {
 }
 
 .card-title {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -125,12 +124,6 @@ input[type="text"] {
 
 .price-section {
     margin-top: 10px;
-}
-
-.new-price {
-    font-size: 18px;
-    font-weight: 600;
-    color: #ff3e00;
 }
 
 .old-price {
@@ -235,6 +228,15 @@ input[type="text"] {
     padding: 20px;
 }
 
+@media (max-width: 551px) {
+    .custom-padding {
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+        padding-left: 20px;
+    }
+}
+
 .truncate-title {
     white-space: nowrap;
     overflow: hidden;
@@ -253,7 +255,6 @@ input[type="text"] {
 
 /* Container */
 .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
     position: relative;
@@ -263,7 +264,7 @@ input[type="text"] {
 .row {
     display: flex;
     flex-wrap: wrap;
-   
+    margin-bottom: 50px;
 }
 
 /* Kolom */
@@ -338,19 +339,20 @@ input[type="text"] {
 
 
 .section-title {
-    font-size: 36px;
+    bottom: 50px;
+    position: relative;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 10px; /* Jarak antara teks dan garis */
 }
 
 .underline {
     margin-bottom: 20px;
-    width: 80px; /* Panjang garis */
-    height: 3px; /* Ketebalan garis */
-    background-color: #333; /* Warna garis */
-    margin: 0 auto; /* Pusatkan garis */
-    margin-top: 5px; /* Jarak atas dari teks */
+    width: 150px;
+    height: 3px;
+    background-color: #333;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 #iconnumber{
@@ -364,5 +366,164 @@ input[type="text"] {
     bottom: 20px;
     top: 3px;
     font-size: 10px;
+}
 
+.close-btn-new {
+    background-color: #e0e0e0; /* Latar belakang transparan */
+    color: #f44336; /* Warna teks merah */
+    border: none; /* Menghilangkan border */
+    font-size: 30px; /* Ukuran font lebih besar untuk tombol close */
+    font-weight: bold; /* Membuat simbol lebih tebal */
+    cursor: pointer; /* Kursor pointer saat di-hover */
+    position: absolute; /* Posisi absolut jika ditempatkan di sudut */
+    top: 10px; /* Jarak dari atas */
+    right: 10px; /* Jarak dari kanan */
+    transition: color 0.3s ease; /* Animasi perubahan warna */
+}
+
+/* Efek hover untuk umpan balik visual */
+.close-btn-new:hover {
+    color: #d32f2f; /* Warna sedikit lebih gelap saat di-hover */
+}
+
+/* Efek fokus untuk aksesibilitas */
+.close-btn-new:focus {
+    outline: none; /* Menghilangkan outline default */
+    box-shadow: 0 0 5px #d32f2f; /* Menambahkan bayangan saat difokuskan */
+}
+
+/* Container Margin Custom */
+.mt-custom {
+    margin-top: 20px;
+}
+
+/* Card Styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut di sekitar card */
+    border: none; /* Menghilangkan border default card */
+    border-radius: 8px; /* Membuat sudut card lebih lembut */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-5px); /* Efek naik sedikit saat di-hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mempertegas bayangan saat hover */
+}
+
+/* Gambar Buku */
+.card-img-top {
+    object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+    width: 100%;
+}
+
+/* Card Body */
+.card-body {
+    padding: 15px;
+    width: 100%;
+}
+
+
+/* Harga */
+.price-section {
+    margin-top: 10px;
+}
+
+
+/* Harga Lama (Strikethrough) */
+.old-price {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Badge Diskon */
+.discount-badge {
+    background-color: #f44336; /* Warna merah untuk badge diskon */
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Tombol Add to Cart */
+.card-footer .btn {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 100%;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card-footer .btn:hover {
+    background-color: #0056b3; /* Warna biru lebih gelap saat di-hover */
+}
+
+/* Memastikan card memiliki tinggi dan layout yang sama */
+.card {
+    height: 100%; /* Agar semua card memiliki tinggi penuh dalam kolom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Memastikan card-body dan tombol align dengan baik */
+}
+
+/* Badge Diskon */
+.discount-badge {
+    background-color: #f44336;
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+/* Judul Buku */
+.truncate-2-lines {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Membatasi judul menjadi dua baris */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    min-height: 50px; /* Memberikan tinggi minimum agar rata */
+    margin-top: 8px;
+}
+
+/* Mengatur Harga Baru dan Harga Lama */
+.price-section {
+    margin-top: auto;
+}
+
+.new-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.old-price {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Tombol Add to Cart */
+.card-footer .btn {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+}
+
+.card-footer .btn:hover {
+    background-color: #0056b3;
 }
