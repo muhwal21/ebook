@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "thumbnail": "https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg",
+    "judul": "Ten Thousand Skies Above You",
+    "deskripsi": "'Ten Thousand Skies Above You's karya Claudia Gray adalah bagian kedua dalam seri Firebird. Ini adalah video pengantar cerita di balik Marguerite Caine, pelompat dimensi yang berpetualang melintasi alam semesta untuk menyelamatkan orang yang dicintainya. Saksikan perjalanan emosional ini!",
+    "url_video": "https://www.example.com/video1",
+    "kategori": "Fiksi",
+    "views": 500000,
+    "popup": "popup"
+  },
+  {
+    "id": 2,
+    "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg",
+    "judul": "Valll Push Test",
+    "deskripsi": "Video pengantar mengenai 'Valll Push Test' dalam pengujian mekanik. Tonton sekarang untuk pemahaman lengkap.",
+    "url_video": "https://www.example.com/video2",
+    "kategori": "Non-Fiksi",
+    "views": 300000,
+    "popup": "popup1"
+  },
+  {
+    "id": 3,
+    "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81UWB7oUZ0L.jpg",
+    "judul": "Video 3",
+    "deskripsi": "Video penjelasan lengkap mengenai topik ketiga. Lihat sekarang!",
+    "url_video": "https://www.example.com/video3",
+    "kategori": "Fiksi",
+    "views": 150000,
+    "popup": "popup2"
+  },
+  {
+    "id": 4,
+    "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg",
+    "judul": "Video 4",
+    "deskripsi": "Sebuah video yang memberikan wawasan mendalam tentang topik keempat.",
+    "url_video": "https://www.example.com/video4",
+    "kategori": "Fiksi",
+    "views": 250000,
+    "popup": "popup3"
+  },
+  {
+    "id": 5,
+    "thumbnail": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F07%2Fchances-are-1-2000.jpg&q=85",
+    "judul": "Video 5",
+    "deskripsi": "Video penjelasan kelima yang memberikan pandangan baru. Tonton sekarang untuk wawasan lengkap.",
+    "url_video": "https://www.example.com/video5",
+    "kategori": "Fiksi",
+    "views": 350000,
+    "popup": "popup4"
+  },
+  {
+    "id": 6,
+    "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg",
+    "judul": "Video 6",
+    "deskripsi": "Penjelasan mendalam dalam video keenam. Jelajahi topik ini lebih lanjut!",
+    "url_video": "https://www.example.com/video6",
+    "kategori": "Fiksi",
+    "views": 400000,
+    "popup": "popup3"
+  },
+  {
+    "id": 7,
+    "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg",
+    "judul": "Video 7",
+    "deskripsi": "Video mengenai topik ketujuh dalam kategori Non-Fiksi.",
+    "url_video": "https://www.example.com/video7",
+    "kategori": "Non-Fiksi",
+    "views": 200000,
+    "popup": "popup1"
+  },
+  {
+    "id": 8,
+    "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/91M4E+SURUL.jpg",
+    "judul": "Video 8",
+    "deskripsi": "Video pengantar untuk topik kedelapan dalam kategori Fiksi.",
+    "url_video": "https://www.example.com/video8",
+    "kategori": "Fiksi",
+    "views": 280000,
+    "popup": "popup5"
+  }
+]

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Toko Online - Pembayaran</title>
+</head>
+<body>
+    <h1>Toko Online</h1>
+    <button id="pay-button">Bayar Sekarang</button>
+
+    <script>
+        document.getElementById('pay-button').addEventListener('click', function() {
+            // Ganti URL di bawah dengan Payment Link Anda
+            window.location.href = 'https://checkout.xendit.co/web/your_payment_link_id';
+        });
+    </script>
+</body>
+</html>

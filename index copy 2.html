@@ -62,22 +62,23 @@
   <div id="preloader"></div>
   <!-- Hero section start -->
   <main>
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" aria-labelledby="hero-title" style="
+    position: relative;
+    top: 100px;">
       <div class="container d-xl-flex align-items-start">
         <div class="hero_about col-xl-6">
           <div class="hero_header">
-            <h1 id="hero-title" class="hero_header-title">Check Our New Books</h1>
+            <h1 id="hero-title" class="hero_header-title">Check Our New Videos</h1>
             <p class="hero_header-text">
-              Temukan buku-buku terbaik untuk mengasah kemampuan public speaking
-              Anda di Dialogika. Kami siap membantu Anda menjadi seorang
-              pembicara yang percaya diri, menginspirasi, dan mempengaruhi
-              dunia. Mulailah perjalanan Anda sekarang!
+              Temukan video-video terbaik untuk mengasah kemampuan public speaking Anda di Dialogika. Kami siap membantu Anda
+              menjadi seorang pembicara yang percaya diri, menginspirasi, dan mempengaruhi dunia. Mulailah perjalanan Anda
+              sekarang!
             </p>
-            <a class="hero_header-btn btn" href="#tab1">Shop Now</a>
+            <a class="hero_header-btn btn" href="#tab1">Watch Now</a>
           </div>
           <div class="hero_contacts">
             <p class="hero_contacts-text">
-              Our support team is available 24/7 to resolve any product issues
+              Our support team is available 24/7 to resolve any product issues.
             </p>
             <span class="hero_contacts-data d-flex flex-column flex-sm-row align-items-center">
               <span class="icon d-flex align-items-center justify-content-center">
@@ -85,7 +86,7 @@
               </span>
               <span class="d-flex flex-column">
                 <span>Phone number</span>
-                <a class="link" href="tel:+1234567890">+62 851-6299-2597</a>
+                <a class="link" href="tel:+6285162992597">+62 851-6299-2597</a>
               </span>
             </span>
           </div>
@@ -96,128 +97,85 @@
           <div class="hero_slider swiper">
             <div class="swiper-wrapper">
               <div
-                class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
+                class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between align-items-md-center swiper-slide">
+                <div class="hero_slider-slide_media">
+                  <iframe width="640" height="360" src="https://www.youtube.com/embed/eiFpyBtGa-Q?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>                
+                <div class="hero_slider-slide_main">
+                  <h2 class="title">Ten Thousand Skies Above You</h2>
+                  <p class="text">
+                    'Ten Thousand Skies Above You' karya Claudia Gray adalah video pengantar cerita di balik Marguerite
+                    Caine, pelompat dimensi yang berpetualang melintasi alam semesta. Saksikan perjalanan emosional ini!
+                  </p>
+                  <ul class="list">
+                    <li class="list-item d-flex align-items-center">
+                      <span class="icon d-flex align-items-center justify-content-center">
+                        <i class="icon-check"></i>
+                      </span>
+                      Lintas Dimensi
+                    </li>
+                    <li class="list-item d-flex align-items-center">
+                      <span class="icon d-flex align-items-center justify-content-center">
+                        <i class="icon-check"></i>
+                      </span>
+                      Petualangan Emosional
+                    </li>
+                    <li class="list-item d-flex align-items-center">
+                      <span class="icon d-flex align-items-center justify-content-center">
+                        <i class="icon-check"></i>
+                      </span>
+                      Temukan Ceritanya
+                    </li>
+                  </ul>
+                  <a class="btn--underline" href="https://www.example.com/video1">About Video</a>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <!-- <div
+                class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between align-items-md-center swiper-slide">
                 <div class="hero_slider-slide_media">
                   <picture>
-                    <source data-srcset="img/placeholder.jpg" srcset="
-                          https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg
-                        " type="image/webp" />
-                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                    <source srcset="https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg" type="image/webp" />
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg" alt="Valll Push Test" />
                   </picture>
                 </div>
                 <div class="hero_slider-slide_main">
-                  <h2 class="title">Judul Buku 1</h2>
+                  <h2 class="title">Valll Push Test</h2>
                   <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing illum
-                    vero itaque adipisci ipsa sit praesentium ullam.
+                    Video pengantar mengenai 'Valll Push Test' dalam pengujian mekanik. Tonton sekarang untuk pemahaman lengkap.
                   </p>
                   <ul class="list">
-                    <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <li class="list-item d-flex align-items-center">
                       <span class="icon d-flex align-items-center justify-content-center">
                         <i class="icon-check"></i>
                       </span>
-                      Mengatasi Grogi
+                      Pengujian Mekanik
                     </li>
-                    <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <li class="list-item d-flex align-items-center">
                       <span class="icon d-flex align-items-center justify-content-center">
                         <i class="icon-check"></i>
                       </span>
-                      Lancar Public Speaking
+                      Hasil Akurat
                     </li>
-                    <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <li class="list-item d-flex align-items-center">
                       <span class="icon d-flex align-items-center justify-content-center">
                         <i class="icon-check"></i>
                       </span>
-                      Menjadi Ganteng
-                    </li>
-                  </ul>
-                  <a class="btn--underline" href="#">About Product</a>
-                </div>
-              </div>
-              <div
-                class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
-                <div class="hero_slider-slide_media">
-                  <picture>
-                    <source data-srcset="img/placeholder.jpg" srcset="
-                          https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg
-                        " type="image/webp" />
-                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
-                  </picture>
-                </div>
-                <div class="hero_slider-slide_main">
-                  <h2 class="title">Judul Buku 2</h2>
-                  <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing illum
-                    vero itaque adipisci ipsa sit praesentium ullam.
-                  </p>
-                  <ul class="list">
-                    <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span class="icon d-flex align-items-center justify-content-center">
-                        <i class="icon-check"></i>
-                      </span>
-                      Menjadi Ganteng
-                    </li>
-                    <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span class="icon d-flex align-items-center justify-content-center">
-                        <i class="icon-check"></i>
-                      </span>
-                      Mengatasi Grogi
-                    </li>
-                    <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span class="icon d-flex align-items-center justify-content-center">
-                        <i class="icon-check"></i>
-                      </span>
-                      Lancar Public Speaking
+                      Tonton untuk Info Lebih Lanjut
                     </li>
                   </ul>
-                  <a class="btn--underline" href="#">About Product</a>
+                  <a class="btn--underline" href="https://www.example.com/video2">About Video</a>
                 </div>
-              </div>
-              <div
-                class="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
-                <div class="hero_slider-slide_media">
-                  <picture>
-                    <source data-srcset="img/placeholder.jpg" srcset="
-                          https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg
-                        " type="image/webp" />
-                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
-                  </picture>
-                </div>
-                <div class="hero_slider-slide_main">
-                  <h2 class="title">Judul Buku 3</h2>
-                  <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing illum
-                    vero itaque adipisci ipsa sit praesentium ullam.
-                  </p>
-                  <ul class="list">
-                    <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span class="icon d-flex align-items-center justify-content-center">
-                        <i class="icon-check"></i>
-                      </span>
-                      Lancar Public Speaking
-                    </li>
-                    <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span class="icon d-flex align-items-center justify-content-center">
-                        <i class="icon-check"></i>
-                      </span>
-                      Bisa Lompat Tinggi
-                    </li>
-                    <li class="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span class="icon d-flex align-items-center justify-content-center">
-                        <i class="icon-check"></i>
-                      </span>
-                      Menjadi Ganteng
-                    </li>
-                  </ul>
-                  <a class="btn--underline" href="#">About Product</a>
-                </div>
-              </div>
+              </div> -->
+              <!-- Tambahkan slide lainnya dengan struktur yang sama -->
             </div>
             <div class="hero-pagination swiper-pagination d-sm-flex flex-column"></div>
           </div>
         </div>
       </div>
     </section>
+    
+    
   
     <div class="ltn__feature-area mt-100 mt--65" style="margin-top: 0px; margin-bottom: 0px; bottom: 100px;">
       <div class="container">
@@ -434,96 +392,14 @@
         data() {
           return {
             books: [
-              {
-                  "id": 1,
-                  "gambar": "https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg",
-                  "judul": "Ten Thousand Skies Above You",
-                  "harga": 100000,
-                  "diskon": 3000,
-                  "kategori": "Fiksi",
-                  "quantity": 0
-              },
-              {
-                  "id": 2,
-                  "gambar": "https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg",
-                  "judul": "Valll Push Test",
-                  "harga": 150000,
-                  "diskon": 5000,
-                  "kategori": "Non-Fiksi",
-                  "quantity": 0
-              },
-              {
-                  "id": 3,
-                  "gambar": "https://images-na.ssl-images-amazon.com/images/I/81UWB7oUZ0L.jpg",
-                  "judul": "The Road Less Traveled",
-                  "harga": 80000,
-                  "diskon": 4000,
-                  "kategori": "Fiksi",
-                  "quantity": 0
-              },
-              {
-                  "id": 4,
-                  "gambar": "https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg",
-                  "judul": "Thinking, Fast and Slow",
-                  "harga": 180000,
-                  "diskon": 8000,
-                  "kategori": "Non-Fiksi",
-                  "quantity": 0
-              },
-              {
-                  "id": 5,
-                  "gambar": "https://images-na.ssl-images-amazon.com/images/I/91M4E+SURUL.jpg",
-                  "judul": "The Power of Habit",
-                  "harga": 250000,
-                  "diskon": 10000,
-                  "kategori": "Non-Fiksi",
-                  "quantity": 0
-              },
-              {
-                  "id": 6,
-                  "gambar": "https://images-na.ssl-images-amazon.com/images/I/51N-u8AsmdL._SX327_BO1,204,203,200_.jpg",
-                  "judul": "The Alchemist",
-                  "harga": 90000,
-                  "diskon": 2000,
-                  "kategori": "Fiksi",
-                  "quantity": 0
-              },
-              {
-                  "id": 7,
-                  "gambar": "https://images-na.ssl-images-amazon.com/images/I/81eB+7+CkUL.jpg",
-                  "judul": "Atomic Habits",
-                  "harga": 120000,
-                  "diskon": 4000,
-                  "kategori": "Non-Fiksi",
-                  "quantity": 0
-              },
-              {
-                  "id": 8,
-                  "gambar": "https://images-na.ssl-images-amazon.com/images/I/71aFt4+OTOL.jpg",
-                  "judul": "Sapiens: A Brief History of Humankind",
-                  "harga": 280000,
-                  "diskon": 15000,
-                  "kategori": "Non-Fiksi",
-                  "quantity": 0
-              },
-              {
-                  "id": 9,
-                  "gambar": "https://images-na.ssl-images-amazon.com/images/I/71KilybDOoL.jpg",
-                  "judul": "The Catcher in the Rye",
-                  "harga": 95000,
-                  "diskon": 5000,
-                  "kategori": "Fiksi",
-                  "quantity": 0
-              },
-              {
-                  "id": 10,
-                  "gambar": "https://images-na.ssl-images-amazon.com/images/I/91uwocAMtSL.jpg",
-                  "judul": "The Great Gatsby",
-                  "harga": 110000,
-                  "diskon": 3500,
-                  "kategori": "Fiksi",
-                  "quantity": 0
-              }
+            {
+              id: 1,
+              thumbnail: "https://i.pinimg.com/originals/a8/b9/ff/a8b9ff74ed0f3efd97e09a7a0447f892.jpg",
+              title: "Public Speaking Essentials",
+              creator: "Dialogika",
+              price: 100000,
+              discount: 3000
+            },
             ],
             cartItems: [],
             isCartOpen: false,

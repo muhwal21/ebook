@@ -1,8 +1,27 @@
 /* Global Box Sizing */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+h5{
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+span {
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+article.col-lg-3 {
+    background-color: transparent !important;
+}
+
+label.custom-label {
+    font-weight: 500;
 }
 
 /* Sidebar Styles */
@@ -27,6 +46,7 @@
 .custom-margin-top {
     margin-top: 50px;
 }
+
 
 .close-btn {
     position: absolute;
@@ -57,8 +77,22 @@ button.btn-light {
 }
 
 button.btn-light {
-    border-radius: 0;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    width: 50px !important;
+    height: 50px !important;
+    cursor: pointer !important;
+    outline: none !important; /* Menghilangkan outline fokus */
+    box-shadow: none !important; /* Menghilangkan bayangan */
 }
+
+button.btn-light:focus, 
+button.btn-light:active {
+    outline: none !important; /* Menghilangkan outline saat fokus atau aktif */
+    box-shadow: none !important; /* Menghilangkan bayangan saat fokus atau aktif */
+}
+
 
 input[type="text"] {
     width: 50px;
@@ -66,7 +100,8 @@ input[type="text"] {
 }
 
 .custom-label {
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500px;
     font-size: 16px;
     color: #333;
 }
@@ -116,7 +151,8 @@ input[type="text"] {
 }
 
 .card-title {
-    font-size: 20px;
+    font-family: Monsterra;
+    font-size: 19px;
     font-weight: 500;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -126,24 +162,11 @@ input[type="text"] {
     margin-top: 10px;
 }
 
-.old-price {
-    font-size: 14px;
-    color: #b0b0b0;
-}
 
-.discount-badge {
-    background-color: #ff3e00;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
 
 /* Footer of card */
 .card-footer {
+    width: 100%;
     padding: 10px;
     background-color: #fff;
     border-top: 1px solid #e0e0e0;
@@ -369,8 +392,8 @@ input[type="text"] {
 }
 
 .close-btn-new {
-    background-color: #e0e0e0; /* Latar belakang transparan */
-    color: #f44336; /* Warna teks merah */
+    background: none;
+    color: #000000; /* Warna teks merah */
     border: none; /* Menghilangkan border */
     font-size: 30px; /* Ukuran font lebih besar untuk tombol close */
     font-weight: bold; /* Membuat simbol lebih tebal */
@@ -430,13 +453,6 @@ input[type="text"] {
     margin-top: 10px;
 }
 
-
-/* Harga Lama (Strikethrough) */
-.old-price {
-    font-size: 0.9rem;
-    color: #999;
-}
-
 /* Badge Diskon */
 .discount-badge {
     background-color: #f44336; /* Warna merah untuk badge diskon */
@@ -448,21 +464,6 @@ input[type="text"] {
     position: absolute;
     top: 10px;
     right: 10px;
-}
-
-/* Tombol Add to Cart */
-.card-footer .btn {
-    font-size: 0.9rem;
-    font-weight: bold;
-    width: 100%;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.card-footer .btn:hover {
-    background-color: #0056b3; /* Warna biru lebih gelap saat di-hover */
 }
 
 /* Memastikan card memiliki tinggi dan layout yang sama */
@@ -489,12 +490,15 @@ input[type="text"] {
 
 /* Judul Buku */
 .truncate-2-lines {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Membatasi judul menjadi dua baris */
+    font-weight: 300;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     white-space: normal;
-    min-height: 50px; /* Memberikan tinggi minimum agar rata */
+    min-height: 50px;
     margin-top: 8px;
 }
 
@@ -504,26 +508,127 @@ input[type="text"] {
 }
 
 .new-price {
-    font-size: 1.2rem;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
     font-weight: bold;
     color: #ff0000;
 }
 
 .old-price {
+    margin: 0px;
     font-size: 0.9rem;
     color: #999;
 }
 
-/* Tombol Add to Cart */
-.card-footer .btn {
-    width: 100%;
-    font-size: 0.9rem;
-    font-weight: bold;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-}
 
 .card-footer .btn:hover {
     background-color: #0056b3;
+}
+
+.cart-button {
+    z-index: 999;
+    margin-top: 170px !important;
+    background-color: #ffd400;
+    border-color: #ffd400;
+    border-radius: 30px;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9; /* Contoh warna latar belakang */
+    border-radius: 8px; /* Contoh border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Contoh bayangan */
+}
+
+
+.cart-button:hover {
+    background-color: #ffbf00; /* Darken slightly on hover */
+    border-color: #ffbf00; /* Darken border to match */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Add a soft shadow */
+}
+
+.remove-button { 
+    color: #be3b3b;               /* Warna teks */
+    padding: 8px 16px;         /* Spasi dalam */
+    border-radius: 5px;        /* Sudut border */
+    cursor: pointer;           /* Tampilkan kursor pointer */
+    transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+    text-decoration: underline;
+    padding-left: 16px;
+    padding-right: 0px;
+}
+
+.remove-button:hover {
+    color: #ff0000;  
+}
+
+.remove-button{
+    padding-top: 0px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.list-group-item{
+    border: 1px solid #a0a0a0;
+    top: 10px;
+    margin-top: 10px;
+    border-top-width: 1px;
+}
+
+.price-sidebar{
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.judul-sidebar{
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.awal{
+    background-color: #0056b3;
+}
+
+.form-control{
+    width: 50px;
+    margin: 0px !important;
+    /* width: 60px !important; */
+}
+
+.readonly {
+    background-color: #f5f5f5; /* Warna latar belakang khusus untuk input readonly */
+    color: #666; /* Warna teks untuk menunjukkan bahwa input tidak aktif */
+    cursor: not-allowed; /* Ganti cursor menjadi 'not-allowed' untuk indikasi */
+}
+
+.col-lg-3, .col-md-4, .col-sm-6 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Media query untuk layar dengan lebar maksimal 555px */
+@media (max-width: 555px) {
+  .col-lg-3, .col-md-4, .col-sm-6 {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+}
+
+.btn-primary{
+    height: 40px;
+}
+
+.cart-items {
+  border: 1px solid #ccc; /* Border abu-abu */
+  border-radius: 8px; /* Membuat sudut sedikit melengkung */
+  padding: 15px; /* Memberi jarak di dalam elemen */
+  margin-top: 16px; /* Margin atas */
+  margin-bottom: 16px; /* Margin bawah */
+  height: 150px; /* Tinggi elemen, sesuaikan dengan kebutuhan Anda */
+  overflow-y: auto; /* Menambahkan scrollbar jika konten lebih dari tinggi */
 }
